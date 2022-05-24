@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="fotoUsuario">
+        <img src="fotoUsuario.jpg" alt="foto de perfil de usuario">
+    </div>
+
+<p>Username</p>
+
+<h2>HISTORIAL</h2>
+<!-- poner una clase en cada una ya que pienso que la mas reciente pueda tener otro estilo.
+ 
+El nombre de la peli, director y fecha son los 3 datos mas importantes de la pelicula, pero tal vez no para el historial!
+tal vez `poner en vez de las pelis, pues las fechas y num de entradas? aunque si los titulos se enlazan a la cartelera puede quedar chulo.
+-->
+ <div class="historial"> 
+    <p class="pelicula1">
+        Rebeca (Alfred Hitchcock, 1940), dia 10, sala 1, numero de entradas 2.
+    </p>
+
+    <p class="pelicula2">
+        El extraño (Orson Welles, 1946), dia 10, sala 1, numero de entradas 2.
+    </p>
+
+    <p class="pelicula3">
+        Cuentos de Tokio (Yasujiro Ozu, 1953), dia 10, sala 1, numero de entradas 2.
+    </p>
+
+    <p class="pelicula4">
+        Los siete samurais (Akira Kurosawa, 1954), dia 10, sala 1, numero de entradas 2.
+    </p>
+
+
+    <p class="pelicula5">
+        Rebelde sin causa (Nicholas Ray, 1955), dia 10, sala 1, numero de entradas 2.
+    </p>
+
+    <p class="pelicula6">
+        Al final de la escapada (Jean Luc Godard, 1959), dia 10, sala 1, numero de entradas 2.
+    </p>
+</div>
+<!-- Los elementos del historial tal vez se puedan encajar en checkbox...o no? preguntar.
+    Tal vez en cad alinea solo poner fecha, y al darle a click que salga la peli y director?
+    keep it simple.
+ -->
+ <div class="borrarHistorial">
+    <input type="button" value="Borrar historial" id="borrarHistorial" onclick="borrarHistorial()"/>
+</div>
+
+</body>
+</html>
