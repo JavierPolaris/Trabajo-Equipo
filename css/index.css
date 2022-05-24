@@ -76,6 +76,23 @@
 } 
   /* Final del nadVar */
 
+  /* Comienzo del logIn*/
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formLog{
+ display: grid;
+ justify-items: center;
+ 
+} 
+  /* Final del logIn*/
+
+
+
+
 
   /* Comienzo del Footer*/
 
