@@ -66,3 +66,7 @@ Estilo:
 API Cines: 
 http://www.omdbapi.com 
 https://api.internationalshowtimes.com/documentation/v4/
+
+
+
+https://codepen.io/misaelrojas/pen/xwdwRM

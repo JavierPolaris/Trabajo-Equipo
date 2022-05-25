@@ -33,28 +33,61 @@
  <!-- Principio del LogIn -->
 <div class="containerForm" id="containerForm">
   <div class="log" id="log">
-    <h1 id="cabezaForm">Aceso</h1>
+    <h1 id="cabezaForm" class="cabezaLog">Aceso</h1>
     <form action=" " class="formLog">
         <input type="text" name="usuario" id="usuario" placeholder="usuario" required><br>
         <input type="password" name="pass" id="pass" placeholder="Contraseña" required><br>
         <div class="botonera">
-        <button id="logIn" type="submit">Entrar</button>
-        <button id="registrarse">Registrarse</button>
+        <button id="logIn" class="submitBtn" type="submit">Entrar</button>
+        <button id="registrarse" class="submitBtn">Registrarse</button>
     </div>
     </form>
   </div>
 
 <div class="registro" id="registro">
-    <h1 id="cabezaRegistro">Registro</h1>
-    <form action=" ">
-        <input type="text" name="user" id="user" placeholder="usuario" required><br><br>
-        <input type="email" name="email" id="email" placeholder="usuario@gmail.com" required><br><br>
-        <input type="email" name="emailConf" id="emailConf" placeholder="confirma correo" required><br><br>
-        <input type="password" name="passFr" id="passFr" placeholder="Contraseña" required><br><br>
-        <input type="password" name="passConf" id="passConf" placeholder="Confirma contraseña" required><br><br>
-        
-        <button id="registrarUser">Registrarse</button>
-    </form>
+    <h1 id="cabezaRegistro" class="cabezaLog">Registro</h1>
+    <form id="form" action="">
+      <input
+        type="text"
+        name="user"
+        id="user"
+        placeholder="usuario"
+        minlength="1"
+        maxlength="15"
+        spellcheck="false"
+        required
+      > <br>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="usuario@gmail.com"
+        required
+      ><br>
+      <input
+        type="email"
+        name="emailConf"
+        id="emailConf"
+        placeholder="confirma correo"
+        autocomplete="off"
+        required
+        ><br>
+      <input
+        type="password"
+        name="passFr"
+        id="passFr"
+        placeholder="Contraseña"
+        autocomplete="off"
+        ><br>
+      <input
+        type="password"
+        name="passConf"
+        id="passConf"
+        placeholder="Confirma contraseña"
+        autocomplete="off"
+        ><br>
+      <button id="registrarUser" class="submitBtn" type="submit">Registrarse</button>
+  </form>
   </div>
 </div>
 

@@ -85,40 +85,86 @@ let userReg = [
 
 // validacion de registro
 
-document.getElementById('registrarUser').addEventListener('click', (e)=> {
-  e.preventDefault();
+const form = document.querySelector('#form');
 
-  let regUser = document.getElementById('user').value;
-  let regEmail = document.getElementById('email').value;
-  let regEmailConf = document.getElementById('emailConf').value;
-  let regPass = document.getElementById('passFr').value;
-  let regPassConf = document.getElementById('passConf').value;
+// form inputs
+const formUser = form.querySelector('#user');
+const formEmail = form.querySelector('#email');
+const formEmailConfirmation = form.querySelector('#emailConf');
+const formPass = form.querySelector('#passFr');
+const formPassConfirmation = form.querySelector('#passConf');
 
+// regular expressions
+const userExp = new RegExp(/^([A-Za-z0-9_]{1,15})$/);
+const emailExp = new RegExp(/^([\d\w_\.-]+)@([\d\w\.-]+)\.([\w\.]{3})$/);
 
-  const userExp = new RegExp(/^([A-Za-z0-9_]{1,15}) $/);
-  const resultadoUser = userExp.test(regUser);
-  const emailExp = new RegExp(/^([\d\w_\.-]+)@([\d\w\.-]+)\.([\w\.]{3})$/);
-  const resultadoEmail = emailExp.test(regEmail);
-  // min 8 caracteres-max 15, almenos 1 Mayuscula,almenos 1 minuscula,al menos un digito, sin espacios en blanco, al menos un caracter
-  const passExp = new RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/);
-  const resultadoPass = passExp.test(regPass)
+/**
+ * chekear que el formato del password sea correcto
+ * @param {String} pass - el password que va a ser chequeado.
+ * @return {String} En caso de que la contraseña sea correcta, se devolverá una cadena vacía,
+ * pero si la contraseña es incorrecta, se devolverá un mensaje.
+ */
+const checkPassFormat = (pass) => {
+  if(pass.length < 8)
+    return 'La contraseña debe tener al menos 8 caracteres.';
 
-if (regEmail === regEmailConf && regPass === regPassConf) {
-    console.log('email y pass iguales')
-    if (resultadoUser && resultadoEmail && resultadoPass)     {
-      console.log('todo ok')
-      location.assign("prueba.html");
-    }else{ 
-      alert('algo estas haciendo mal')
-    }
-}else{ 
-  alert('Los correos electrónicos tienen que coincidir al igual que el password')
+  if(pass.length > 15)
+    return 'La contraseña no debe exceder los 15 caracteres.';
+
+  // comprobar la contraseña tiene una letra mayúscula
+  if(!/[A-Z]/.test(pass))
+    return 'La contraseña debe contener al menos una letra mayúscula';
+
+  // comprobar la contraseña tiene una letra minúscula
+  if(!/[a-z]/.test(pass))
+    return 'La contraseña debe contener al menos una letra mayúscula';
+
+  // comprobar la contraseña tiene un dígito
+  if(!/[0-1]/.test(pass))
+    return 'La contraseña debe contener al menos un dígito';
+
+  if(/\ /.test(pass))
+    return 'La contraseña no puede tener espacios en blanco';
+
+  return '';
 }
 
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 
+  // verifica el formato de usuario
+  if(!userExp.test(formUser.value)){
+    alert('Usuario no valido'); return;
+  }
 
-})
+  // verifica el formato del Email
+  if(!emailExp.test(formEmail.value)){
+    alert('Email no valido'); return;
+  }
 
+  // el correo electrónico de verificación y el correo electrónico de confirmación son iguales
+  if(formEmail.value.localeCompare(formEmailConfirmation.value) != 0){
+    alert('Emails son diferentes'); return;
+  }
+
+  // verifica el password
+  let passCheckMsg = checkPassFormat(formPass.value);
+  if(passCheckMsg != ''){
+    alert(passCheckMsg); return;
+  }
+
+  // comprobar que la contraseña y la confirmación de la contraseña son iguales
+  if(formPass.value.localeCompare(formPassConfirmation.value) != 0){
+    alert('El passwords es diferentes'); return;
+  }
+
+  // verifique que el correo electrónico y la contraseña sean iguales
+  if(formEmail.value.localeCompare(formPass.value) == 0){
+    alert('El correo electrónico y la contraseña no pueden ser iguales'); return;
+  }
+
+  location.assign("prueba.html");
+});
 
 
 
