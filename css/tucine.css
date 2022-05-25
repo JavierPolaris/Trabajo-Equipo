@@ -62,9 +62,11 @@
   /* Final del nadVar */
 
 /* COMIENZO DE TUCINE */
-#contenedorTodo{
-    display: flex;
-    flex-direction: column-reverse;
+#cajaGigante{
+    
+        display: flex;
+        justify-content: space-around;
+    
 }
 
 #avatar {
@@ -74,13 +76,16 @@
 
 
 
-#cajaGrande {
+#historiales {
     display: flex;
     flex-direction: column;
     margin-left: 150px;
     border: solid red 3px;
 }
 
+#infoPersonal{
+    display: flex;
+}
 
 #borrarHistorial {
     display: flex;

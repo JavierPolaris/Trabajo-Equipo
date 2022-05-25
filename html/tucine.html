@@ -34,14 +34,22 @@
      </div> 
 
 
-<p id="username"></p>
+
 <!-- https://hardsoft-support.kayako.com/avatar/get/cffe388c-be91-5e51-ac5f-aa4c7e322f4e?1618392882
  poner una clase en cada una ya que pienso que la mas reciente pueda tener otro estilo.
  
 El nombre de la peli, director y fecha son los 3 datos mas importantes de la pelicula, pero tal vez no para el historial!
 tal vez `poner en vez de las pelis, pues las fechas y num de entradas? aunque si los titulos se enlazan a la cartelera puede quedar chulo.
 -->
- <div id="cajaGrande"> 
+
+<div id="cajaGigante">
+<div id="infoPersonal">
+    <p id="username"></p>
+</div>
+
+
+ <div id="historiales"> 
+
 <h2 id="titlo">HISTORIAL</h2>
 
     <p id="historial1">
@@ -66,6 +74,7 @@ tal vez `poner en vez de las pelis, pues las fechas y num de entradas? aunque si
     <div id="borrarHistorial">
         <input type="button" value="Borrar historial" id="borrarHistorial" onclick="borrarHistorial()"/>
     </div>
+</div>
 </div>
 <!-- Los elementos del historial tal vez se puedan encajar en checkbox...o no? preguntar.
     Tal vez en cad alinea solo poner fecha, y al darle a click que salga la peli y director?
