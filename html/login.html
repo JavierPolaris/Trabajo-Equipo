@@ -18,12 +18,12 @@
     <label for="toggler"><i class="ri-menu-line"></i> </label>
     <div class="menu">
         <ul class="list">
-            <li><a href="#">Cartelera</a> </li>
-            <li><a href="#">Historia</a> </li>
-            <li><a href="#">Tu Entrada</a> </li>
-            <li><a href="#">Tu Cine</a> </li>
-            <li><a href="#">🛒</a> </li>
-            <li><a href="#">LogIn</a> </li>
+            <li><a href="Cartelera.html">Cartelera</a> </li>
+            <li><a href="Historia.html">Historia</a> </li>
+            <li><a href="TueEntrada.htm">Tu Entrada</a> </li>
+            <li><a href="TuCine.html">Tu Cine</a> </li>
+            <li><a href="Carrito.html">🛒</a> </li>
+            <li><a href="login.html">LogIn</a> </li>
         </ul>
     </div>
 </nav>
@@ -31,28 +31,31 @@
 
 
  <!-- Principio del LogIn -->
-<div class="containerForm">
+<div class="containerForm" id="containerForm">
+  <div class="log" id="log">
     <h1 id="cabezaForm">Aceso</h1>
     <form action=" " class="formLog">
         <input type="text" name="usuario" id="usuario" placeholder="usuario" required><br>
         <input type="password" name="pass" id="pass" placeholder="Contraseña" required><br>
         <div class="botonera">
-        <button id="logIn">Entrar</button>
+        <button id="logIn" type="submit">Entrar</button>
         <button id="registrarse">Registrarse</button>
     </div>
     </form>
-</div>
-<div class="containerRegistro">
+  </div>
+
+<div class="registro" id="registro">
     <h1 id="cabezaRegistro">Registro</h1>
     <form action=" ">
-        <input type="text" name="user" id="user" placeholder="usuario" required>
-        <input type="email" name="email" id="email" placeholder="usuario@gmail.com" required>
-        <input type="email" name="emailConf" id="emailConf" placeholder="repite correo" required>
-        <input type="password" name="passFr" id="passFr" placeholder="Contraseña" required>
-        <input type="password" name="passConf" id="passConf" placeholder="passConf" required>
+        <input type="text" name="user" id="user" placeholder="usuario" required><br><br>
+        <input type="email" name="email" id="email" placeholder="usuario@gmail.com" required><br><br>
+        <input type="email" name="emailConf" id="emailConf" placeholder="confirma correo" required><br><br>
+        <input type="password" name="passFr" id="passFr" placeholder="Contraseña" required><br><br>
+        <input type="password" name="passConf" id="passConf" placeholder="Confirma contraseña" required><br><br>
         
         <button id="registrarUser">Registrarse</button>
     </form>
+  </div>
 </div>
 
 

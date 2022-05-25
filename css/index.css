@@ -77,10 +77,14 @@
   /* Final del nadVar */
 
   /* Comienzo del logIn*/
+  .log {
+    display: inline;
+  }
 .containerForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .formLog{
@@ -94,7 +98,21 @@ button {
   border: 0;
   color: inherit;
 }
+
   /* Final del logIn*/
+
+
+
+  /* Principìo del Registro*/
+.registro {
+  display: none;
+  margin-bottom: 17px;
+      
+ 
+}
+
+
+  /* Final del Registro*/
 
 
 
