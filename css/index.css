@@ -88,6 +88,12 @@
  justify-items: center;
  
 } 
+
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+}
   /* Final del logIn*/
 
 
