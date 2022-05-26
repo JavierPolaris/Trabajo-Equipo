@@ -251,6 +251,52 @@ form.addEventListener('submit', (e) => {
 
 
 
+// TODO-------------------principio CARRITO
+
+class Carrito {
+  constructor(clave){
+    this.clave = clave || "pelicula";
+    this.pelicula = this.obtener();
+  }
+  // agregar que recibe un producto y lo agrega en caso de que no exista.
+  agregar(pelicula) {
+    if(!this.existe(peliculas.id)){
+      this.peliculas.push(pelicula);
+      this.guardar();
+    }
+  }
+
+  quitar(id) {
+    const indice = this.peliculas.findIndex(p=> p.id === id);
+    if (indice != -1) {
+      this.peliculas.splice(indice, 1);
+      this.guardar();
+    }
+  }
+
+
+  guardar() {
+    localStorage.setItem(this.clave, JSON.stringify(this.peliculas));
+  }
+  // obtener que devuelve el arreglo de productos
+  obtener() {
+    const peliculasCodificados = localStorage.getItem(this.clave);
+    return JSON.parse(peliculasCodificados) || [];
+  }
+
+  existe(id) {
+    return this.peliculas.find(pelicula => pelicula.id ===id);
+  }
+
+  obtenerConteo() {
+    return this.peliculas.length;
+  }
+
+
+}
+
+
+
 
 
 

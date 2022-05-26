@@ -1,9 +1,5 @@
 # Trabajo-Equipo
-
-Entrega Lunes dia 30!!!!!
-
-
-
+# Cine Paradiso
 Problema:
 -Sala de cines pequeña de 4 salas quiere vender sus entradas por internet.
 -No hace falta registrarse para comprar entrada
@@ -48,25 +44,50 @@ correo confirmación:
 password:
 Confirmación de password.
 
-	
+## Ramas
+Este rpoyecto ha contado con inumerables ramas. **deshboard** a contenido todos los test y ramas de los diferentes miembros del grupo que ha su vez han trabajodo con otras sub-ramas de esta.
 
-		
+## Comentarios
+----------------Etiquetas normalizadas----------------
+Cuando queramos incluir una descripción de un elemento usaremos etiquetas normalizadas. Por ejemplo una etiqueta normalizada para describir al autor de un código es @author. En cambio no es normalizada <<@autor>> ni <<@Author>> ni <<@authors>>.
 
+A continuación indicamos la lista de etiquetas normalizadas recomendadas:
 
+@param {type}
+Indica un parámetro para un método, función o constructor y el tipo de dato que es.----------* @param {string}
 
+@return {type}
+Indica qué devuelve un método o función y su tipo.------------* @return {boolean}
 
-
-
-Estilo:
--Cine familiar, cines clasicos de los años 20 a años 30. magia del Cine #teatro
-
-
-
-
-API Cines: 
-http://www.omdbapi.com 
-https://api.internationalshowtimes.com/documentation/v4/
-
+@type {Type}
+Identifica el tipo de una variable, propiedad o expresión.-------------@type {number}
 
 
-https://codepen.io/misaelrojas/pen/xwdwRM
+
+Un comentario típico para describir una función incluirá una descripción de lo que hace la función, la descripción de sus parámetros, y la descripción de lo que devuelve la función.
+
+La descripción de un parámetro se hace comenzando con @param
+
+La descripción de lo que devuelve la función se hace comenzando con @return. Si la función no devuelve nada se omitirá esta etiqueta.
+                      /**
+                       * Verifies if the string is in a valid email format
+                       * @param  {string}
+                       * @return  {boolean}
+                       */
+
+Si una línea es demasiado larga la dividimos en varias líneas. La primera estará sin indentar y el resto indentada (desplazada hacia dentro) respecto de la primera.
+
+Los comentarios puntuales en línea se harán con //. Por ejemplo:
+
+var tmpPers; //Variable temporal que almacenará un objeto Persona
+
+
+### Notes
+Estamos dandolo todo, si tienes algun problema porfavor te rogamos que nos lo digas para poder subsanarlo con rapidez!!!
+
+
+### API utilizada
+https://www.themoviedb.org/documentation/api
+
+
+
