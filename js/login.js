@@ -10,6 +10,13 @@ let userReg = [
       "userName": "Polaris",
       "password": "1234",
       "Emails":  "javi@gmail.com",
+      "peliculas": [{
+        "titulo": "",
+        "techa": "",
+        "horario": "",
+        "nº entradas": "",
+        "sala": "",
+    }]
       
        
       
@@ -19,7 +26,14 @@ let userReg = [
       "edad": 30,
       "userName": "Yann",
       "password": "4321",
-      "Emails":  "yaan@gmail.com",
+      "emails":  "yaan@gmail.com",
+      "peliculas": [{
+        "titulo": "",
+        "fecha": "",
+        "horario": "",
+        "nº entradas": "",
+        "sala": "",
+    }]
       }
   ]
 
@@ -164,6 +178,36 @@ form.addEventListener('submit', (e) => {
   }
 
   location.assign("prueba.html");
+
+
+
+
+
+// !-------------------comienzo LocalStorage
+
+let clientes = 0;
+localStorage.setItem(`clientes: ${clientes}`, JSON.stringify({
+  "nombre": "",
+  "edad": "",
+  "userName": formUser.value,
+  "password": formPass.value,
+  "emails":  formEmail.value,
+  "foto": "",
+  "peliculas": [{
+    "titulo": "",
+    "techa": "",
+    "horario": "",
+    "nº entradas": "",
+    "sala": "",
+
+  }]
+
+}))
+
+
+  
+
+
 });
 
 
@@ -172,3 +216,11 @@ form.addEventListener('submit', (e) => {
 
 
 // TODO-------------------final REGISTRO
+
+
+
+
+
+
+
+  
