@@ -45,7 +45,7 @@ password:
 Confirmación de password.
 
 ## Ramas
-Este rpoyecto ha contado con inumerables ramas. **deshboard** a contenido todos los test y ramas de los diferentes miembros del grupo que ha su vez han trabajodo con otras sub-ramas de esta.
+Este proyecto ha contado con inumerables ramas. **deshboard** a contenido todos los test y ramas de los diferentes miembros del grupo que ha su vez han trabajodo con otras sub-ramas de esta.
 
 ## Comentarios
 ----------------Etiquetas normalizadas----------------
