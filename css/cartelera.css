@@ -1,11 +1,11 @@
 *, *:before, *:after {
     box-sizing: border-box;
   }
-  
+
   html {
     font-size: 100%;
   }
-  
+
   body {
     font-family: acumin-pro, system-ui, sans-serif;
     margin: 0;
@@ -16,10 +16,10 @@
     align-items: start;
     min-height: 100vh;
   }
- 
- 
+
+
  /* Comienzo del nadVar */
- 
+
  .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
 
 #toggler,
 .navbar label{
-  
+
     display: none;
 }
 
@@ -64,28 +64,58 @@
         padding: 20px;
     }
     .navbar label{
-       
+
         display: inline-flex;
         align-items: center;
         cursor: pointer;
     }
     #toggler:checked ~ .menu{
         max-height: 100%;
-        
+
     }
-} 
+}
 
 /* Comienzo de tarjetas */
 
-.card{
+
+
+#cartel0,
+#cartel1,
+#cartel2,
+#cartel3,
+#cartel4,
+#cartel5,
+#cartel6,
+#cartel7,
+#cartel8,
+#cartel9{
+    position: relative;
+    z-index: 1;
     float: left;
     width: 205px;
     height: 305px;
     border: 1px solid #ccc;
     box-shadow: 1px 1px 2px #ddd;
-    background: white;
-    overflow: hidden;
     margin: 22px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+
+.sinopsis{
+    position: relative;
+    z-index: 0;
+    margin: -228px;
+    float: left;
+    width: 205px;
+    height: 305px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    background: gray;
+    opacity: 0.5;
+    color: white;
+    font-size: 13px;
+    padding: 10px;
     margin-top: 40px;
     cursor: pointer;
 }
