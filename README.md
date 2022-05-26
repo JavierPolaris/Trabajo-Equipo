@@ -1,6 +1,6 @@
 # Trabajo-Equipo
 
-Entrega Lunes dia 30!!!!!
+Entrega Martes día 31!!!!!
 
 
 
