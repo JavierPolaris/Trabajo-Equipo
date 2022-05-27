@@ -77,40 +77,41 @@
   /* Final del nadVar */
 
 /* COMIENZO DE TUCINE */
-#cajaGigante{
+
+.avatar{
+  margin-left: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#fotoUsuario {
+
+  width: 169px;
+  height: 178px;
+  border-radius: 88px;
+}
+
+ 
+ #cajaGigante{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+ }
+
+ #historiales{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: flex-end;
+  justify-content: flex-end;
     
-    display: flex;
-    justify-content: space-around;
-
-}
-
-#avatar {
-display: flex;
-flex-direction: row;
-}
+ }
+ /* FIN DE TU CINE*/
 
 
-
-#historiales {
-display: flex;
-flex-direction: column;
-margin-left: 150px;
-border: solid red 3px;
-}
-
-#infoPersonal{
-display: flex;
-}
-
-#borrarHistorial {
-display: flex;
-align-items: flex-end;
-flex-direction: row-reverse;
-justify-content: center;
-}
-
-/* fin del tucine
- */  
  /* Comienzo del Footer*/
 
 

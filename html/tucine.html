@@ -13,7 +13,7 @@
 
   <!-- Principio del nadVar -->
 <nav class="navbar container">
-    <a href="#" class="logo">Cines de Mierda</a>
+    <a href="#" class="logo">Cines de autor</a>
     <input type="checkbox" id="toggler">
     <label for="toggler"><i class="ri-menu-line"></i> </label>
     <div class="menu">
@@ -21,9 +21,9 @@
             <li><a href="#">Cartelera</a> </li>
             <li><a href="#">Historia</a> </li>
             <li><a href="#">Tu Entrada</a> </li>
-            <li><a href="#">Tu Cine</a> </li>
+            <li><a href="tucine.html">Tu Cine</a> </li>
             <li><a href="#">🛒</a> </li>
-            <li><a href="#">LogIn</a> </li>
+            <li><a href="login.html">LogIn</a> </li>
         </ul>
     </div>
 </nav>
@@ -33,23 +33,18 @@
 <!-- TUCINE YANN-->
 <div id="contenedortodo">
 
-
-    <div id="avatar"> 
-        <img src=" " id="fotoUsuario">
-     </div> 
-
-
-
-<!-- https://hardsoft-support.kayako.com/avatar/get/cffe388c-be91-5e51-ac5f-aa4c7e322f4e?1618392882
- poner una clase en cada una ya que pienso que la mas reciente pueda tener otro estilo.
- 
-El nombre de la peli, director y fecha son los 3 datos mas importantes de la pelicula, pero tal vez no para el historial!
-tal vez `poner en vez de las pelis, pues las fechas y num de entradas? aunque si los titulos se enlazan a la cartelera puede quedar chulo.
--->
-
 <div id="cajaGigante">
-<div id="infoPersonal">
-    <p id="username"></p>
+  <div id="perfil">
+  <div id="avatar"class="avatar"> 
+    <img src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2021/01/Peliculas-4k-Lumiere-restauradas.jpg?fit=1280%2C720&quality=80&ssl=1" id="fotoUsuario">
+    <div id="infoPersonal">
+      <p id="username"></p>
+      <label for="CambiarFoto">Cambiar avatar: <br></label>
+      <input type="file" id="seleccionArchivos" name="file" accept="image/*">
+
+  </div>
+ </div> 
+
 </div>
 
 
