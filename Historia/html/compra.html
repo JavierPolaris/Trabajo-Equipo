@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/index.css"> -->
+    <title>Compra</title>
+
+    <link href="/Trabajo-Equipo/css/compra.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar container">
+        <a href="#" class="logo">Cines Paradiso</a>
+        <input type="checkbox" id="toggler">
+        <label for="toggler"><i class="ri-menu-line"></i> </label>
+        <div class="menu">
+            <ul class="list">
+                <li><a href="#">Cartelera</a> </li>
+                <li><a href="#">Historia</a> </li>
+                <li><a href="#">Tu Entrada</a> </li>
+                <li><a href="#">Tu Cine</a> </li>
+                <li><a href="#">🛒</a> </li>
+                <li><a href="#">LogIn</a> </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="contenedor">
+        <div id="containerCarrito">
+            <div id="fotoC">
+                <img id="cartel1"
+                    src="https://pbs.twimg.com/media/C_6XIO6XkAAqMZI.jpg"></img>
+            </div>
+            <div id="horCaBo" class="horCaBo">
+                <p id="tituloP">mother!</p>
+                <p id="ratingP">IMDB rating: 6.6/10</p>
+                <div id="horarios">
+                    <button class="botonH" id="botonH1">12:45</button>
+                    <button class="botonH" id="botonH2">14:00</button>
+                    <button class="botonH" id="botonH3">15:15</button>
+                </div>
+                <input id="calendarioCarrito" type="date">
+
+
+                <!-- checkbox estilo butaca -->
+                <div class="asientos">
+                    <h1 class="h1Asientos">Selecciona tus Asientos</h1>
+                    <div class="containercin">
+                        <!-- recuadro UNO -->
+                        <div class="cineAsiento">
+                            <div class="fila">
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" name="check" id="asiento1" value="none">
+                                        <label for="asiento1">1</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" name="check" id="asiento2" value="none">
+                                        <label for="asiento2">2</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" name="check" id="asiento3" value="none">
+                                        <label for="asiento3">3</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" name="check" id="asiento4" value="none">
+                                        <label for="asiento4">4</label>
+                                    </div>
+                                </div>
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento5" name="check" />
+                                        <label for="asiento5">5</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento6" name="check" />
+                                        <label for="asiento6">6</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento7" name="check" />
+                                        <label for="asiento7">7</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento8" name="check" />
+                                        <label for="asiento8">8</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento9" name="check" />
+                                        <label for="asiento9">9</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento10" name="check" />
+                                        <label for="asiento10">10</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento11" name="check" />
+                                        <label for="asiento11">11</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento12" name="check" />
+                                        <label for="asiento12">12</label>
+                                    </div>
+                                </div>
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento13" name="check" />
+                                        <label for="asiento13">13</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento14" name="check" />
+                                        <label for="asiento14">14</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento15" name="check" />
+                                        <label for="asiento15">15</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento16" name="check" />
+                                        <label for="asiento16">16</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento17" name="check" />
+                                        <label for="asiento17">17</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento18" name="check" />
+                                        <label for="asiento18">18</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento19" name="check" />
+                                        <label for="asiento19">19</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento20" name="check" />
+                                        <label for="asiento20">20</label>
+                                    </div>
+                                </div>
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento21" name="check" />
+                                        <label for="asiento21">21</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento22" name="check" />
+                                        <label for="asiento22">22</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento23" name="check" />
+                                        <label for="asiento23">23</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento24" name="check" />
+                                        <label for="asiento124">24</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fila">
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento25" name="check" />
+                                        <label for="asiento25">25</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento26" name="check" />
+                                        <label for="asiento26">26</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento27" name="check" />
+                                        <label for="asiento27">27</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento28" name="check" />
+                                        <label for="asiento28">28</label>
+                                    </div>
+                                </div>
+                                <div class="seccion">
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento29" name="check" />
+                                        <label for="asiento29">29</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento30" name="check" />
+                                        <label for="asiento30">30</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento31" name="check" />
+                                        <label for="asiento31">31</label>
+                                    </div>
+                                    <div class="asiento">
+                                        <input type="checkbox" value="None" id="asiento32" name="check" />
+                                        <label for="asiento32">32</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- Final checkbox estilo butaca -->
+
+
+
+
+
+
+                </div>
+
+               
+                    <label>Introduce el número de entradas: </label><input type="number" min="0" id="nEntradas">
+                    <output id="precioTotal"></output>
+               
+                <button id="botonCarrito" onclick='location.href="/Trabajo-Equipo/html/carrito.html"'>Comprar</button>
+                <!-- location.href="/Trabajo-Equipo/html/carrito.html" -->
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Miscelania</h1>
+
+            <h2>Contacto</h2>
+
+            <address>
+                41920 San Juan de Aznalfarache(Sevilla). La Banda<br>
+
+                <a class="footer__btn" href="mailto:example@gmail.com">Email</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Cartelería</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Sala 1</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sala 2</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sala 3</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sala 4</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Tecnología</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/Cinerama">Cinerama</a>
+                    </li>
+
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/VistaVision">Vistavision</a>
+                    </li>
+
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/IMAX">IMAX</a>
+                    </li>
+
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/Cinemascope">Cinemascope</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="https://www.privacypolicies.com/es/generador-politicas-privacidad/">Politica de
+                            Privacidad</a>
+                    </li>
+
+                    <li>
+                        <a href="https://c.tenor.com/XtqQwrSn9qIAAAAM/spank-tom-and-jerry.gif">Protección de
+                            datos</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="legal">
+            <p>&copy; 2022. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Desing by <span class="heart">♥</span> Los ginetes del Love and Thunder </span>
+            </div>
+        </div>
+    </footer>
+    <script src="/Trabajo-Equipo/js/compra.js"></script>
+</body>
+
+</html>
