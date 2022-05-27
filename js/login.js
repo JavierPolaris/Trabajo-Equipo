@@ -12,12 +12,13 @@ let userReg = [
     "password": "1234",
     "Emails": "javi@gmail.com",
     "peliculas": [{
-      "titulo": "",
-      "fecha": "",
-      "horario": "",
-      "nº entradas": "",
-      "sala": "",
-    }]
+      "titulo": "titul de pelicula d ejavi",
+      "fecha": "10/05/22",
+      "horario": "tarde",
+      "nº entradas": "5",
+      "sala": "1",
+    }
+   ]
 
 
 
@@ -29,11 +30,11 @@ let userReg = [
     "password": "4321",
     "emails": "yaan@gmail.com",
     "peliculas": [{
-      "titulo": "",
-      "fecha": "",
-      "horario": "",
-      "nº entradas": "",
-      "sala": "",
+      "titulo": "hola pesao peliucla d eyann",
+      "fecha": "07/01/2022",
+      "horario": "Mañana",
+      "nº entradas": "3",
+      "sala": "1",
     }]
   }
 ]
@@ -62,14 +63,21 @@ document.getElementById('logIn').addEventListener('click', (e) => {
       "edad": 35,
       "userName": "Polaris",
       "password": "1234",
-      "Emails": "javi@gmail.com",
+      "emails": "javi@gmail.com",
       "peliculas": [{
-        "titulo": "",
-        "fecha": "",
-        "horario": "",
-        "nº entradas": "",
-        "sala": "",
+        "titulo": '"Lo que el viento se llevó"',
+        "fecha": "01/12/2022",
+        "horario": "mañanas",
+        "n_entradas": "2",
+        "sala": "1",
     
+      },
+      {
+        "titulo": "Milagro",
+        "fecha": "12/12/22",
+        "horario": "mañana",
+        "n_entradas": "3",
+        "sala": "3",
       }]
     
     }))
@@ -85,12 +93,19 @@ document.getElementById('logIn').addEventListener('click', (e) => {
       "password": "4321",
       "emails": "yaan@gmail.com",
       "peliculas": [{
-        "titulo": "",
-        "fecha": "",
-        "horario": "",
-        "nº entradas": "",
-        "sala": "",
+        "titulo": '"Casablanca"',
+        "fecha": "15/04/2022",
+        "horario": "tarde",
+        "n_entradas": "2",
+        "sala": "2",
     
+      },
+      {
+        "titulo": '"Milagro"',
+        "fecha": "12/12/22",
+        "horario": "mañana",
+        "n_entradas": "3",
+        "sala": "3",
       }]
       
     }))
@@ -179,7 +194,7 @@ const checkPassFormat = (pass) => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
+  sessionStorage.clear();
   // verifica el formato de usuario
   if (!userExp.test(formUser.value)) {
     alert('Usuario no valido'); return;
@@ -219,8 +234,8 @@ form.addEventListener('submit', (e) => {
 
   // !-------------------comienzo LocalStorage registro
 
-  let contador = 2;
-  localStorage.setItem(`clientes: ${contador}`, JSON.stringify({
+
+  sessionStorage.setItem(`clientes: 3`, JSON.stringify({
     "nombre": "",
     "edad": "",
     "userName": formUser.value,
@@ -251,6 +266,12 @@ form.addEventListener('submit', (e) => {
 
 // TODO-------------------final REGISTRO
 
+
+// TODO-------------------principio LogOut
+
+document.getElementById('logout').addEventListener('click', ()=> {
+  location.assign("index.html");
+})
 
 
 

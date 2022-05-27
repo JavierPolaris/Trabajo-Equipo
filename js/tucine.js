@@ -1,10 +1,10 @@
 
 // crear imagen de avatar
 
- 
+
 const imagenPrevisualizacion = document.getElementById('fotoUsuario');
 
-document.getElementById("seleccionArchivos").addEventListener('change', ()=> {
+document.getElementById("seleccionArchivos").addEventListener('change', () => {
   const archivos = seleccionArchivos.files;
 
   if (!archivos || !archivos.length) {
@@ -22,66 +22,80 @@ document.getElementById("seleccionArchivos").addEventListener('change', ()=> {
 
 // Final crear imagen de avatar
 
+
+//IMPRESION EN EL DOM DEL PERFIL DE YANN
+//Informacion del perfil
+
 var user1 = JSON.parse(sessionStorage.getItem('clientes: 1'));
+var user2 = JSON.parse(sessionStorage.getItem('clientes: 0'));
+var user3 = JSON.parse(sessionStorage.getItem('clientes: 3'));
 
-var userName = sessionStorage.getItem('clientes: 1');
-console.log(userName);
+// var userName = sessionStorage.getItem('clientes: 1');
+// console.log(user2.peliculas[0].titulo)
+// let contador = 0;
+for (let i = 0; i < sessionStorage.length; i++) {
+  let key = sessionStorage.key(i);
 
-//   console.log(user1); 
+  if (key == 'clientes: 1') {//yann
+    // console.log('clientes: 1')
+    document.getElementById("username").innerHTML = `Información de perfil: ${user1.nombre} <br> Edad: ${user1.edad} <br> Nombre de usuario: ${user1.userName} <br> Email: ${user1.emails}`;
+    document.getElementById("historial1").innerHTML = `Titulo: ${user1.peliculas[0].titulo} <br>
+                                                      Fecha: ${user1.peliculas[0].fecha} <br>
+                                                      Horario: ${user1.peliculas[0].horario} <br>
+                                                      Nº Entradas: ${user1.peliculas[0].n_entradas} <br>
+                                                      Sala: ${user1.peliculas[1].sala} <br><br>
+                                                      Titulo: ${user1.peliculas[1].titulo} <br>
+                                                      Fecha: ${user1.peliculas[1].fecha} <br>
+                                                      Horario: ${user1.peliculas[1].horario} <br>
+                                                      Nº Entradas: ${user1.peliculas[1].n_entradas} <br>
+                                                      Sala: ${user1.peliculas[1].sala} <br>`;
 
-// console.log(sessionStorage.getItem('clientes:1'));
-  
-// var userString =sessionStorage.getItem('clientes: 1');
-// console.log(userString);
-
-
-
-//yann
-
-var rollo1=Object.values(user1);
-var user = rollo1[0];
-
-document.getElementById("username").innerHTML = user
-
-/* for(let i=0; i<sessionStorage.length; i++) {
-   let key = sessionStorage.key(i);
-   console.log(`${key}: ${sessionStorage.getItem(key)}`);
-   var pesado= (`${key}: ${sessionStorage.getItem(key)}`)
-   console.log(pesado);
-   alert(pesado)
-
-
-} */
-
-
- /*  if(`${sessionStorage.userName=='Polaris'}`){
-    console.log('se ha logueado polaris');
-  } else if (`${sessionStorage.userName=='Yannis'}`){
-    console.log('se ha logueado YANN');
+  } else if (key == 'clientes: 0') { //javier
+    console.log('clientes: 0')
+    document.getElementById("username").innerHTML = `Información de perfil: ${user2.nombre} <br> Edad: ${user2.edad} <br> Nombre de usuario: ${user2.userName} <br> Email: ${user2.emails}`
+    document.getElementById("historial1").innerHTML = `Titulo: ${user2.peliculas[0].titulo} <br>
+                                                      Fecha: ${user2.peliculas[0].fecha} <br>
+                                                      Horario: ${user2.peliculas[0].horario} <br>
+                                                      Nº Entradas: ${user2.peliculas[0].n_entradas} <br>
+                                                      Sala: ${user2.peliculas[0].sala} <br><br>
+                                                      Titulo: ${user2.peliculas[1].titulo} <br>
+                                                      Fecha: ${user2.peliculas[1].fecha} <br>
+                                                      Horario: ${user2.peliculas[1].horario} <br>
+                                                      Nº Entradas: ${user2.peliculas[1].n_entradas} <br>
+                                                      Sala: ${user2.peliculas[1].sala} <br>`;
+  } else if (key == 'clientes: 3') {
+    document.getElementById("username").innerHTML = `Información de perfil: ${user3.userName} <br> PassWord: ${user3.password}<br> Email: ${user3.emails}`
+    document.getElementById("historial1").innerHTML = `Titulo: ${user3.peliculas[0].titulo} <br>
+                                                      Fecha: ${user3.peliculas[0].fecha} <br>
+                                                      Horario: ${user3.peliculas[0].horario} <br>
+                                                      Nº Entradas: ${user3.peliculas[0].n_entradas} <br>
+                                                      Sala: ${user3.peliculas[0].sala} <br><br>
+                                                      Titulo: ${user3.peliculas[1].titulo} <br>
+                                                      Fecha: ${user3.peliculas[1].fecha} <br>
+                                                      Horario: ${user3.peliculas[1].horario} <br>
+                                                      Nº Entradas: ${user3.peliculas[1].n_entradas} <br>
+                                                      Sala: ${user3.peliculas[1].sala} <br>`;
   }
- */
+}
 
 
-//document.getElementById("username").innerHTML = (`Información del perfil: <br><br>Nombre de usuario: ${key.userName} <br> Correo electrónico: ${key.emails} `)
-/* document.getElementById("historial1").innerHTML = (`Día: ${userReg2[0].peliculas[0].fecha}, película: ${userReg2[0].peliculas[0].titulo}, Número de entradas: ${userReg2[0].peliculas[0]["nº entradas"]} Sala: ${userReg2[0].peliculas[0].sala}`),
-document.getElementById('fotoUsuario').src = (userReg2[0].foto); 
- */
 
 
- 
-// console.log(key.userName)
-  // console.log(`${key.userName}`)
-  // {
-  //   mostrarYann();
-  //   console.log(object);
-  // }else if (`${key.userName}`== 'Polaris') {
-  //   mostrarPolaris()
-  // }  else console.log('coño')
-    
-  
-    
-  
+//BORRAR HISTORIAL
+// function borrarHistorial(){
+
+// document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
+// }
 
 
-        
-    
+
+
+
+
+
+
+// TODO-------------------principio LogOut
+
+document.getElementById('logout').addEventListener('click', ()=> {
+  location.assign("index.html");
+})
