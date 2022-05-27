@@ -2,38 +2,8 @@
 
 
 
-localStorage.setItem(`clientes: 0`, JSON.stringify({
-  "nombre": "Javier Garcia-Rojo",
-  "edad": 35,
-  "userName": "Polaris",
-  "password": "1234",
-  "Emails": "javi@gmail.com",
-  "peliculas": [{
-    "titulo": "",
-    "fecha": "",
-    "horario": "",
-    "nº entradas": "",
-    "sala": "",
 
-  }]
 
-}))
-localStorage.setItem(`clientes: 1`, JSON.stringify({
-  "nombre": "Yann Poirot",
-  "edad": 30,
-  "userName": "Yann",
-  "password": "4321",
-  "emails": "yaan@gmail.com",
-  "peliculas": [{
-    "titulo": "",
-    "fecha": "",
-    "horario": "",
-    "nº entradas": "",
-    "sala": "",
-
-  }]
-
-}))
 //Creo un JSON con los usuarios predefinidos
 let userReg = [
   {
@@ -87,15 +57,47 @@ document.getElementById('logIn').addEventListener('click', (e) => {
   if (userLog == '' || passLog == '') {
     alert("Los campos usuario y contraseña no pueden estar vacios")
   }
-  if ((userLog === userReg[0].userName && passLog === userReg[0].password) || (userLog === userReg[1].userName && passLog === userReg[1].password)) {
+  if (userLog === userReg[0].userName && passLog === userReg[0].password) {
     console.log('ok log')
+    localStorage.setItem(`clientes: 0`, JSON.stringify({
+      "nombre": "Javier Garcia-Rojo",
+      "edad": 35,
+      "userName": "Polaris",
+      "password": "1234",
+      "Emails": "javi@gmail.com",
+      "peliculas": [{
+        "titulo": "",
+        "fecha": "",
+        "horario": "",
+        "nº entradas": "",
+        "sala": "",
+    
+      }]
+    
+    }))
     location.assign("tucine.html");
 
-  } else {
-    console.log('no estas registrado')
+ } else if (userLog === userReg[1].userName && passLog === userReg[1].password) {
 
-  }
+  localStorage.setItem(`clientes: 1`, JSON.stringify({
+    "nombre": "Yann Poirot",
+    "edad": 30,
+    "userName": "Yann",
+    "password": "4321",
+    "emails": "yaan@gmail.com",
+    "peliculas": [{
+      "titulo": "",
+      "fecha": "",
+      "horario": "",
+      "nº entradas": "",
+      "sala": "",
+  
+    }]
+  
+  }))
+  location.assign("tucine.html");
 
+  }else console.log('no estas registrado')
 
 
 
