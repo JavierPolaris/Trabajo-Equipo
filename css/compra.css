@@ -194,9 +194,12 @@ button {
     font-size: 1rem;
     padding: 0 1.3em;
 }
-.botonH :checked{
-    border: solid 2px grey;
+.active{
+    border: solid 3px lightcoral;
 }
+/* .botonH:{
+    border: solid 5px black;
+} */
 
 /* #hora3{
     display: flex;

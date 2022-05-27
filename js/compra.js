@@ -46,3 +46,43 @@
 //         "sala": "1"
 //     }]
 //     }]
+document.getElementById('botonH1').addEventListener("click", function(){
+  
+    if(botonH2.classList.contains("active")){
+        botonH2.classList.remove("active");
+     }
+     if(botonH3.classList.contains("active")){
+        botonH3.classList.remove("active");
+     }
+    
+     if(!botonH1.classList.contains("active")){
+        botonH1.classList.toggle("active");
+     }
+ });
+ document.getElementById('botonH2').addEventListener("click", function(){
+  
+    if(botonH1.classList.contains("active")){
+       botonH1.classList.remove("active");
+    }
+    if(botonH3.classList.contains("active")){
+        botonH3.classList.remove("active");
+     }
+    if(!botonH2.classList.contains("active")){
+       botonH2.classList.toggle("active");
+    }
+   
+ });
+ document.getElementById('botonH3').addEventListener("click", function(){
+  
+    if(botonH1.classList.contains("active")){
+       botonH1.classList.remove("active");
+    }
+    if(botonH2.classList.contains("active")){
+        botonH2.classList.remove("active");
+     }
+    
+    if(!botonH3.classList.contains("active")){
+       botonH3.classList.toggle("active");
+    }
+   
+ });
