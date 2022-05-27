@@ -125,6 +125,7 @@ img:hover{
   transition: opacity 500ms;
 }
 
+
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
