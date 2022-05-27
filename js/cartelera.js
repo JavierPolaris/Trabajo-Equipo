@@ -40,3 +40,20 @@ for(let i=0; i<overviews.length; i++){
     
 
 this.getMovies()
+
+function verSinopsis(){
+document.getElementById('cartel0').style.zIndex = "0";
+document.getElementById('sinop0').style.zIndex = "1";
+    // var carteles = document.querySelectorAll('.film');
+    // for(let i=0; i<carteles.length; i++){
+    //     carteles.style.zIndex = "0"
+    //     document.getElementById('sinop0').style.zIndex = "1";
+    // }
+    //  
+     
+
+}
+function verCartel(){
+    document.getElementById('cartel0').style.zIndex = "1";
+    document.getElementById('sinop0').style.zIndex = "0";
+}
