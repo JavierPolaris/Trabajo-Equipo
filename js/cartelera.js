@@ -310,7 +310,7 @@ let userNoReg = {
 
   fechaOrdenada = nuevaF.join("-");
   userNoReg.peliculas[0].fecha = fechaOrdenada;
-
+  localStorage.setItem('usuario2', JSON.stringify(userNoReg))
   console.log(userNoReg);
 });
   
