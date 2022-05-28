@@ -36,11 +36,12 @@ let datosPeliculas = [
     }
 
 ]
-let t=localStorage.getItem('titulo')
-console.log(t)
-document.getElementById('cartel').src=sessionStorage.getItem('foto')
-document.getElementById('nombreP').innerText=sessionStorage.getItem('titulo');
-document.getElementById('numEntradas').innerText=`${sessionStorage.getItem('precioEntradas')} entradas: ${sessionStorage.getItem('precioEntradas')*5}€`;
-document.getElementById('horario').innerText=sessionStorage.getItem('hora');
+
+document.getElementById('cartel').src=localStorage.getItem('foto')
+document.getElementById('nombreP').innerText=localStorage.getItem('titulo');
+document.getElementById('numEntradas').innerText=`${localStorage.getItem('precioEntradas')} entradas: ${localStorage.getItem('precioEntradas')*5}€`;
+document.getElementById('horario').innerText=localStorage.getItem('hora');
+document.getElementById('diaP').innerText=localStorage.getItem('fecha');
+document.getElementById('butacasPosition').innerText=localStorage.getItem('')
 
 

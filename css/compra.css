@@ -33,16 +33,12 @@ body {
 
 .navbar a {
   text-decoration: none;
-  /* color: inherit; */
-  color: white;
+  color: inherit;
 
 }
 
 .logo {
   margin-right: 50px;
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
-  
 }
 
 .list {
@@ -84,30 +80,6 @@ body {
   }
 }
 
-
-#logout {
-
-  padding: 1px 30px;
-  border: none;
-  background-color: #f7f7f7;
-  color: #878787;
-  border-radius: 6px;
-  cursor: pointer;
-
-
-}
-#logout:hover {
-  background-color: #996c6f;
-  color: #ffffff;
-  transform: translateY(-2px);
-  border-radius: 6px;
-  }
-.btnNad:hover {
-background-color: #996c6f;
-color: #ffffff;
-transform: translateY(-2px);
-border-radius: 6px;
-}
 /* Final del nadVar */
 
 /* Comienzo de tarjetas */
@@ -149,7 +121,7 @@ border-radius: 6px;
     background: gray;
     opacity: 0.5;
     color: white;
-    font-size: 11px;
+    font-size: 13px;
     padding: 10px;
     margin-top: 40px;
     cursor: pointer;
@@ -273,58 +245,6 @@ border-radius: 6px;
 }
 
 /* Final del Registro*/
-/* COMIENZO DE TUCINE */
-#perfil {
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.avatar{
-  margin-left: 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#fotoUsuario {
-
-  width: 169px;
-  height: 178px;
-  border-radius: 88px;
-}
-
- 
- #cajaGigante{
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
- }
- #historiales{
-  padding: 10px 84px 14px 74px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  border-radius: 50px;
-  background: #ffffff;
-  box-shadow:  5px 5px 10px #b5b5b5,
-               -5px -5px 10px #ffffff;
-  display: flex;
-    flex-flow: row wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white;
- }
- 
- /* FIN DE TU CINE*/
-
-
-
-
-
-
-
 
 /* Comienzo del carrito */
 #entrada1 {
@@ -353,7 +273,7 @@ border-radius: 6px;
   margin: 3%;
 }
 
-#nombreP, #numEntradas, #horario, #diaP {
+#nombreP, #numEntradas, #horario {
   color: gray;
   font: 25px Arial, sans-serif;
   margin: 1%;
@@ -376,9 +296,9 @@ border-radius: 6px;
 
 /* Comienza el Compra */
 #contenedor {
+  display: flex;
+  
   position: absolute;
-  z-index: 3;
-  display: none;
   flex-wrap: wrap;
   justify-content: center;
   height: 90%;
@@ -461,25 +381,29 @@ border-radius: 6px;
   margin: 0.6em 0;
   font-size: 1rem;
   padding: 0 1.3em;
-  border: solid 2px gray;
+  border: solid 2px grey;
+ 
 }
 .active{
-  border: solid 3px lightcoral;
+  border: solid 3px li;
 }
+/* #botonH2 :active{
+    border: solid 5px red;
+ } */
 
 #calendarioCarrito {
   display: flex;
   flex-wrap: wrap;
   border: solid 2px grey;
-  height: 10%;
-  width: 32%;
+  height: 7%;
+  width: 30%;
   border-radius: 5%;
   /* margin-bottom: 10px; */
   /* margin-top: 7%; */
   /* margin-bottom: 7%; */
   /* padding: 1%; */
 }
- 
+
 
 #botonCarrito {
   display: flex;
