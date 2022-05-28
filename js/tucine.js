@@ -59,8 +59,8 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
 //IMPRESION EN EL DOM DEL PERFIL DE YANN
 //Informacion del perfil
 
-var user1 = JSON.parse(sessionStorage.getItem('clientes: 1'));
-var user2 = JSON.parse(sessionStorage.getItem('clientes: 0'));
+var user1 = JSON.parse(sessionStorage.getItem('clientes: 0'));
+var user2 = JSON.parse(sessionStorage.getItem('clientes: 1'));
 var user3 = JSON.parse(sessionStorage.getItem('clientes: 3'));
 // console.log(user2.peliculas)
 

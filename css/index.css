@@ -394,22 +394,8 @@ border-radius: 6px;
 
 #contenedor {
 
-    z-index: 3;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 50px;
-  /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 90%;
-    width: 1512px;
-    height: 561px;
-    align-items: center;
-    position: absolute;
-    top: 25px;
-    margin-top: 204px;
-    margin-left: 309px; */
+  z-index: 3;
+
 }
 
 #tituloP{
@@ -430,20 +416,21 @@ border-radius: 6px;
 }
 
 #containerCarrito {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  /* flex-wrap: wrap; */
-  flex-direction: row;
-  border: solid 1px #eeebeb;
-  border-radius: 5%;
-  width: 50%;
-  height: 100%;
-  margin: 1%;
-  border-radius: 34px;
-  background: #ebebeb;
-  box-shadow: -8px 8px 16px #888888,
-      8px -8px 16px #ffffff;
+  z-index: 3;
+      /* gap: 20px; */
+    /* flex-wrap: wrap; */
+    display: flex;
+    /* flex-direction: row; */
+    border: solid 1px #eeebeb;
+    border-radius: 5%;
+    width: 50%;
+    height: 100%;
+    /* margin: 1%; */
+    margin: -832px 6px 27px 383px;
+    border-radius: 34px;
+    background: #ebebeb;
+    box-shadow: -8px 8px 16px #888888, 8px -8px 16px #ffffff;
+
 }
 
 #fotoC {
