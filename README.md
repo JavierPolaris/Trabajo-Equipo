@@ -1,5 +1,8 @@
 # Trabajo-Equipo
+
 # Cine Paradiso
+
+
 Problema:
 -Sala de cines pequeña de 4 salas quiere vender sus entradas por internet.
 -No hace falta registrarse para comprar entrada

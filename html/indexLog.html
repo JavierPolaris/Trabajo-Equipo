@@ -13,18 +13,17 @@
 
   <!-- Principio del nadVar -->
 <nav class="navbar container">
-    <a href="#" class="logo">Cines Paradiso</a>
+    <a href="indexLog.html" class="logo">Cines de Mierda</a>
     <input type="checkbox" id="toggler">
     <label for="toggler"><i class="ri-menu-line"></i> </label>
     <div class="menu">
         <ul class="list">
-          <li><a href="cartelera.html">Cartelera</a> </li>
-          <li><a href="historia.html">Historia</a> </li>
+          <li><a href="Cartelera.html">Cartelera</a> </li>
+          <li><a href="Historia.html">Historia</a> </li>
           <li><a href="TueEntrada.htm">Tu Entrada</a> </li>
-
+          <li><a href="tucine.html">Tu Cine</a> </li>
           <li><a href="Carrito.html">🛒</a> </li>
-
-          <li><a href="login.html">LogIn</a> </li>
+          <li><button id="logout">LogOut</button> </li>
         </ul>
     </div>
 </nav>
@@ -132,6 +131,8 @@
     <!-- Final del footer -->
 
 
-    <script src="/js/index.js"></script>
+    <script> document.getElementById('logout').addEventListener('click', ()=> {
+      location.assign("index.html");
+    })</script>
 </body>
 </html>
