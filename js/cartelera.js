@@ -68,7 +68,7 @@ for(let j=0; j<=9; j++){
     var poster = document.getElementById(`cartel${j}`);
     
     poster.addEventListener('click', ()=>{
-        mostrar(contenedor)
+        mostrar(contenedorMax)
     //     if(contenedor.style.display == 'none')
     //     contenedor = document.getElementById('contenedor').style.display = 'block';
     //     else{
@@ -180,23 +180,118 @@ function btnGr(id) {
 
 
 let userNoReg = {
-    nombre: "",
-    edad: "",
-    userName: "",
-    password: "",
-    emails: "",
-    foto: "",
-  
-    peliculas: [
+  "nombre": "",
+  "edad": '',
+  "userName": "",
+  "password": "",
+  "emails": "",
+  "foto": "",
+    "peliculas": [
       {
-        titulo: document.getElementById("tituloP").innerText,
-        fecha: "a",
-        horario: "Mañana",
-        nEntradas: "2",
-        butacas: [{}],
-        sala: "1",
-      },
-    ],
+        "titulo": document.getElementById('tituloP').innerText,
+        "fecha": "",
+        "horario": "",
+        "nEntradas": "",
+        "butacas": [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        "sala": "",
+      }
+    ]
+
   };
   
   document.getElementById("nEntradas").addEventListener("click", () => {

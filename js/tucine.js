@@ -18,8 +18,8 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
 
   imagenPrevisualizacion.src = objetoUrl;
   //TODO----------tenemos que coger la key mirar en foto y cambiarla para que la foto que elijamos se mantenga en el sesionStorage
-  let imgSesion = JSON.parse(sessionStorage.getItem('clientes: 3'));
-    imgSesion.foto = objetoUrl
+  // let imgSesion = JSON.parse(sessionStorage.getItem('clientes: 3'));
+  //   imgSesion.foto = objetoUrl
     
   
 })
@@ -34,7 +34,7 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
 var user1 = JSON.parse(sessionStorage.getItem('clientes: 1'));
 var user2 = JSON.parse(sessionStorage.getItem('clientes: 0'));
 var user3 = JSON.parse(sessionStorage.getItem('clientes: 3'));
-console.log(user3.foto)
+// console.log(user2.peliculas)
 
 // var userName = sessionStorage.getItem('clientes: 1');
 // console.log(user2.peliculas[0].titulo)
@@ -70,7 +70,7 @@ for (let i = 0; i < sessionStorage.length; i++) {
                                                       Nº Entradas: ${user2.peliculas[1].n_entradas} <br>
                                                       Sala: ${user2.peliculas[1].sala} <br>`;
   } else if (key == 'clientes: 3') {
-    imagenPrevisualizacion.src = `${user3.foto}`
+    // imagenPrevisualizacion.src = `${user3.foto}`
     document.getElementById("username").innerHTML = `Información de perfil: ${user3.userName} <br> PassWord: ${user3.password}<br> Email: ${user3.emails}`
     document.getElementById("historial1").innerHTML = `Titulo: ${user3.peliculas[0].titulo} <br>
                                                       Fecha: ${user3.peliculas[0].fecha} <br>
@@ -88,13 +88,19 @@ for (let i = 0; i < sessionStorage.length; i++) {
 }
 
 
+  //TODO----------tenemos que coger la key mirar en peliculas y cambiarla o borrarla para que no se vea ni se recarge
 
 
-//BORRAR HISTORIAL
-// function borrarHistorial(){
 
-// document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
-// }
+  //BORRAR HISTORIAL
+  document.getElementById('borrarHistorial').addEventListener('click', () => {
+    user2.peliculas = [];
+    console.log('borrado')
+    sessionStorage.setItem(`clientes: 0`, JSON.stringify(user2))
+  document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
+  }) 
+  // console.log(JSON.parse(sessionStorage.getItem(`clientes: 0`)))
+
 
 
 

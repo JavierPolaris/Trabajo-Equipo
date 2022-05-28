@@ -12,14 +12,217 @@ let userReg = [
     "password": "1234",
     "emails": "javi@gmail.com",
     "foto": "",
-    "peliculas": [{
-      "titulo": "titul de pelicula d ejavi",
-      "fecha": "10/05/22",
-      "horario": "tarde",
-      "nº entradas": "5",
-      "sala": "1",
-    }
-   ]
+      "peliculas": [
+        {
+          titulo: "Never Rarely Sometimes Always",
+          fecha: "21/03/2019",
+          horario: "10:30",
+          nEntradas: "3",
+          butacas: [{
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          }],
+          sala: "1",
+        },
+
+        {
+          titulo: "La dolce vita",
+          fecha: "23/01/2021",
+          horario: "19:00",
+          nEntradas: "2",
+          butacas: [{
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          },
+          {
+
+          }],
+          sala: "3",
+        },
+      ],
+    
+    
 
 
 
@@ -31,15 +234,218 @@ let userReg = [
     "password": "4321",
     "emails": "yaan@gmail.com",
     "foto": "",
-    "peliculas": [{
-      "titulo": "hola pesao peliucla d eyann",
-      "fecha": "07/01/2022",
-      "horario": "Mañana",
-      "nº entradas": "3",
-      "sala": "1",
-    }]
+    "peliculas": [
+      {
+        titulo: "Never Rarely Sometimes Always",
+        fecha: "21/03/2019",
+        horario: "10:30",
+        nEntradas: "3",
+        butacas: [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        sala: "1",
+      },
+
+      {
+        titulo: "La dolce vita",
+        fecha: "23/01/2021",
+        horario: "19:00",
+        nEntradas: "2",
+        butacas: [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        sala: "3",
+      },
+    ],
   }
-]
+];
+
 
 
 
@@ -59,65 +465,457 @@ document.getElementById('logIn').addEventListener('click', (e) => {
     alert("Los campos usuario y contraseña no pueden estar vacios")
   }
 
-  if (userLog === userReg[0].userName && passLog === userReg[0].password){
+  if (userLog === userReg[0].userName && passLog === userReg[0].password) {
     console.log('ok log')
     sessionStorage.setItem(`clientes: 0`, JSON.stringify({
-
       "nombre": "Javier Garcia-Rojo",
       "edad": 35,
       "userName": "Polaris",
       "password": "1234",
       "emails": "javi@gmail.com",
       "foto": "",
-      "peliculas": [{
-        "titulo": '"Lo que el viento se llevó"',
-        "fecha": "01/12/2022",
-        "horario": "mañanas",
-        "n_entradas": "2",
-        "sala": "1",
-    
-      },
-      {
-        "titulo": "Milagro",
-        "fecha": "12/12/22",
-        "horario": "mañana",
-        "n_entradas": "3",
-        "sala": "3",
-      }]
-    
+        "peliculas": [
+          {
+            titulo: "Never Rarely Sometimes Always",
+            fecha: "21/03/2019",
+            horario: "10:30",
+            nEntradas: "3",
+            butacas: [{
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            }],
+            sala: "1",
+          },
+  
+          {
+            titulo: "La dolce vita",
+            fecha: "23/01/2021",
+            horario: "19:00",
+            nEntradas: "2",
+            butacas: [{
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            },
+            {
+  
+            }],
+            sala: "3",
+          },
+        ],
+     
+
+
+
     }))
 
     location.assign("tucine.html");
-    
 
-  }else if(userLog === userReg[1].userName && passLog === userReg[1].password){
+
+  } else if (userLog === userReg[1].userName && passLog === userReg[1].password) {
     sessionStorage.setItem(`clientes: 1`, JSON.stringify({
       "nombre": "Yann Poirot",
-      "edad": 30,
-      "userName": "Yann",
-      "password": "4321",
-      "emails": "yaan@gmail.com",
-      "foto": "",
-      "peliculas": [{
-        "titulo": '"Casablanca"',
-        "fecha": "15/04/2022",
-        "horario": "tarde",
-        "n_entradas": "2",
-        "sala": "2",
-    
-      },
+    "edad": 30,
+    "userName": "Yann",
+    "password": "4321",
+    "emails": "yaan@gmail.com",
+    "foto": "",
+    "peliculas": [
       {
-        "titulo": '"Milagro"',
-        "fecha": "12/12/22",
-        "horario": "mañana",
-        "n_entradas": "3",
-        "sala": "3",
-      }]
-      
+        titulo: "Never Rarely Sometimes Always",
+        fecha: "21/03/2019",
+        horario: "10:30",
+        nEntradas: "3",
+        butacas: [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        sala: "1",
+      },
+
+      {
+        titulo: "La dolce vita",
+        fecha: "23/01/2021",
+        horario: "19:00",
+        nEntradas: "2",
+        butacas: [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        sala: "3",
+      },
+    ],
+
+
     }))
     location.assign("tucine.html");
-  }else {
-    console.log('no estas registrado')}
+  } else {
+    console.log('no estas registrado')
+  }
 
 });
 // creo el boton registro para redireccionarnos al registro
@@ -245,23 +1043,16 @@ form.addEventListener('submit', (e) => {
     "password": formPass.value,
     "emails": formEmail.value,
     "foto": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_640.png",
-    "peliculas": [{
-      "titulo": "",
-      "fecha": "",
-      "horario": "",
-      "nº entradas": "",
-      "sala": "",
+    "peliculas": []
+  } ))
+  
 
-    }]
-
-  }))
-
-
-
+ 
 
 
 });
 
+ 
 
 
 
@@ -272,7 +1063,7 @@ form.addEventListener('submit', (e) => {
 
 // TODO-------------------principio LogOut
 
-document.getElementById('logout').addEventListener('click', ()=> {
+document.getElementById('logout').addEventListener('click', () => {
   location.assign("index.html");
 })
 
@@ -281,20 +1072,20 @@ document.getElementById('logout').addEventListener('click', ()=> {
 // TODO-------------------principio CARRITO
 
 class Carrito {
-  constructor(clave){
+  constructor(clave) {
     this.clave = clave || "pelicula";
     this.pelicula = this.obtener();
   }
   // agregar que recibe un producto y lo agrega en caso de que no exista.
   agregar(pelicula) {
-    if(!this.existe(peliculas.id)){
+    if (!this.existe(peliculas.id)) {
       this.peliculas.push(pelicula);
       this.guardar();
     }
   }
 
   quitar(id) {
-    const indice = this.peliculas.findIndex(p=> p.id === id);
+    const indice = this.peliculas.findIndex(p => p.id === id);
     if (indice != -1) {
       this.peliculas.splice(indice, 1);
       this.guardar();
@@ -312,7 +1103,7 @@ class Carrito {
   }
 
   existe(id) {
-    return this.peliculas.find(pelicula => pelicula.id ===id);
+    return this.peliculas.find(pelicula => pelicula.id === id);
   }
 
   obtenerConteo() {
