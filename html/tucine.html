@@ -1,184 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Importo el logo de la hamburguesa -->
-     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/tucine.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importo el logo de la hamburguesa -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/tucine.css">
+  <title>Document</title>
 </head>
+
 <body>
 
   <!-- Principio del nadVar -->
-<nav class="navbar container">
-    <a href="#" class="logo">Cines de Mierda</a>
+  <nav class="navbar container">
+    <a href="/html/indexLog.html" class="logo">Cines de autor</a>
     <input type="checkbox" id="toggler">
     <label for="toggler"><i class="ri-menu-line"></i> </label>
     <div class="menu">
-        <ul class="list">
-            <li><a href="#">Cartelera</a> </li>
-            <li><a href="#">Historia</a> </li>
-            <li><a href="#">Tu Entrada</a> </li>
-            <li><a href="#">Tu Cine</a> </li>
-            <li><a href="#">🛒</a> </li>
-            <li><a href="#">LogIn</a> </li>
-        </ul>
+      <ul class="list">
+        <li><a href="#">Cartelera</a> </li>
+        <li><a href="#">Historia</a> </li>
+        <li><a href="#">Tu Entrada</a> </li>
+        <li><a href="tucine.html">Tu Cine</a> </li>
+        <li><a href="#">🛒</a> </li>
+        <li><button id="logout">LogOut</button> </li>
+      </ul>
     </div>
-</nav>
+  </nav>
   <!-- Final del nadVar -->
 
 
-<!-- TUCINE YANN-->
-<div id="contenedortodo">
+  <!-- TUCINE YANN-->
+  <div id="contenedortodo">
+    
+      <div id="cajaGigante">
+        <div id="perfil">
+          <div id="avatar" class="avatar">
+            <img
+              src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2021/01/Peliculas-4k-Lumiere-restauradas.jpg?fit=1280%2C720&quality=80&ssl=1"
+              id="fotoUsuario">
+            <div id="infoPersonal">
+              <p id="username"></p>
+              <label for="CambiarFoto">Cambiar avatar: <br></label>
+              <input type="file" id="seleccionArchivos" name="file" accept="image/*">
+
+            </div>
+          </div>
+
+        </div>
 
 
-    <div id="avatar"> 
-        <img src=" " id="fotoUsuario">
-     </div> 
+        <div id="historiales" class="historiales">
 
+          <h2 id="titlo">HISTORIAL</h2>
 
+          <p id="historial1">Tu historial está vacío
+          </p>
 
-<!-- https://hardsoft-support.kayako.com/avatar/get/cffe388c-be91-5e51-ac5f-aa4c7e322f4e?1618392882
- poner una clase en cada una ya que pienso que la mas reciente pueda tener otro estilo.
- 
-El nombre de la peli, director y fecha son los 3 datos mas importantes de la pelicula, pero tal vez no para el historial!
-tal vez `poner en vez de las pelis, pues las fechas y num de entradas? aunque si los titulos se enlazan a la cartelera puede quedar chulo.
--->
-
-<div id="cajaGigante">
-<div id="infoPersonal">
-    <p id="username"></p>
-</div>
-
-
- <div id="historiales"> 
-
-<h2 id="titlo">HISTORIAL</h2>
-
-    <p id="historial1">
-    </p>
-
-    <p id="historial2">
-    </p>
-
-    <p id="historial3">
-    </p>
-
-    <p id="historial4">
-    </p>
-
-
-    <p id="historial5">
-    </p>
-
-    <p id="historial6">
-    </p>
-
-    <div id="borrarHistorial">
-        <input type="button" value="Borrar historial" id="borrarHistorial" onclick="borrarHistorial()"/>
-    </div>
-</div>
-</div>
-<!-- Los elementos del historial tal vez se puedan encajar en checkbox...o no? preguntar.
+          <div id="borrarHistorial">
+            <input type="button" value="Borrar historial" id="borrarHistorial" onclick="borrarHistorial()"/>
+          </div>
+        </div>
+      </div>
+      <!-- Los elementos del historial tal vez se puedan encajar en checkbox...o no? preguntar.
     Tal vez en cad alinea solo poner fecha, y al darle a click que salga la peli y director?
     keep it simple.
  -->
- 
-</div>
+
+   
+  </div>
 
 
 
 
-    <!-- Principio del footer -->
-    <footer class="footer">
-        <div class="footer__addr">
-          <h1 class="footer__logo">Miscelania</h1>
-              
-          <h2>Contacto</h2>
-          
-          <address>
-            41920 San Juan de Aznalfarache(Sevilla).  La Banda<br>
-                
-            <a class="footer__btn" href="mailto:example@gmail.com">Email</a>
-          </address>
-        </div>
-        
-        <ul class="footer__nav">
-          <li class="nav__item">
-            <h2 class="nav__title">Cartelería</h2>
-      
-            <ul class="nav__ul">
-              <li>
-                <a href="#">Sala 1</a>
-              </li>
-      
-              <li>
-                <a href="#">Sala 2</a>
-              </li>
-                  
-              <li>
-                <a href="#">Sala 3</a>
-              </li>
+  <!-- Principio del footer -->
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Miscelania</h1>
 
-              <li>
-                <a href="#">Sala 4</a>
-              </li>
-            </ul>
+      <h2>Contacto</h2>
+
+      <address>
+        41920 San Juan de Aznalfarache(Sevilla). La Banda<br>
+
+        <a class="footer__btn" href="mailto:example@gmail.com">Email</a>
+      </address>
+    </div>
+
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Cartelería</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="#">Sala 1</a>
           </li>
-          
-          <li class="nav__item nav__item--extra">
-            <h2 class="nav__title">Tecnología</h2>
-            
-            <ul class="nav__ul nav__ul--extra">
-              <li>
-                <a href="https://es.wikipedia.org/wiki/Cinerama">Cinerama</a>
-              </li>
-              
-              <li>
-                <a href="https://es.wikipedia.org/wiki/VistaVision">Vistavision</a>
-              </li>
-              
-              <li>
-                <a href="https://es.wikipedia.org/wiki/IMAX">IMAX</a>
-              </li>
-              
-              <li>
-                <a href="https://es.wikipedia.org/wiki/Cinemascope">Cinemascope</a>
-              </li>
-              
-            </ul>
+
+          <li>
+            <a href="#">Sala 2</a>
           </li>
-          
-          <li class="nav__item">
-            <h2 class="nav__title">Legal</h2>
-            
-            <ul class="nav__ul">
-              <li>
-                <a href="https://www.privacypolicies.com/es/generador-politicas-privacidad/">Politica de Privacidad</a>
-              </li>
-              
-              <li>
-                <a href="https://c.tenor.com/XtqQwrSn9qIAAAAM/spank-tom-and-jerry.gif">Protección de datos</a>
-              </li>
-              
-            </ul>
+
+          <li>
+            <a href="#">Sala 3</a>
+          </li>
+
+          <li>
+            <a href="#">Sala 4</a>
           </li>
         </ul>
-        
-        <div class="legal">
-          <p>&copy; 2022. All rights reserved.</p>
-          
-          <div class="legal__links">
-            <span>Desing by <span class="heart">♥</span> Los ginetes del Love and Thunder </span>
-          </div>
-        </div>
-      </footer>
+      </li>
 
-    <!-- Final del footer -->
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Tecnología</h2>
+
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="https://es.wikipedia.org/wiki/Cinerama">Cinerama</a>
+          </li>
+
+          <li>
+            <a href="https://es.wikipedia.org/wiki/VistaVision">Vistavision</a>
+          </li>
+
+          <li>
+            <a href="https://es.wikipedia.org/wiki/IMAX">IMAX</a>
+          </li>
+
+          <li>
+            <a href="https://es.wikipedia.org/wiki/Cinemascope">Cinemascope</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="https://www.privacypolicies.com/es/generador-politicas-privacidad/">Politica de Privacidad</a>
+          </li>
+
+          <li>
+            <a href="https://c.tenor.com/XtqQwrSn9qIAAAAM/spank-tom-and-jerry.gif">Protección de datos</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+
+    <div class="legal">
+      <p>&copy; 2022. All rights reserved.</p>
+
+      <div class="legal__links">
+        <span>Desing by <span class="heart">♥</span> Los ginetes del Love and Thunder </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Final del footer -->
 
 
-    <script src="/js/tucine.js"></script>
+  <script src="/js/tucine.js"></script>
+  <script> document.getElementById('logout').addEventListener('click', ()=> {
+    location.assign("index.html");
+  })</script>
 </body>
+
 </html>
