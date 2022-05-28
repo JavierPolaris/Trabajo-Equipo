@@ -8,7 +8,7 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
   const archivos = seleccionArchivos.files;
 
   if (!archivos || !archivos.length) {
-    imagenPrevisualizacion.src = "";
+    imagenPrevisualizacion.src = "https://www.ganaderia.com/img/default.jpg";
     return;
   }
 
@@ -20,8 +20,36 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
   //TODO----------tenemos que coger la key mirar en foto y cambiarla para que la foto que elijamos se mantenga en el sesionStorage
   // let imgSesion = JSON.parse(sessionStorage.getItem('clientes: 3'));
   //   imgSesion.foto = objetoUrl
-    
+//BORRAR HISTORIAL
+
+
+  for (let i = 0; i < sessionStorage.length; i++) {
+    let key = sessionStorage.key(i);
+
+    if (key == 'clientes: 1') { //Yann
+
+      user1.foto = objetoUrl;
+     
+      sessionStorage.setItem('clientes: 1', JSON.stringify(user1))
+      
+
+    } else if (key == 'clientes: 0') { //javier
+
+      user2.foto = "";
+      
+      sessionStorage.setItem('clientes: 0', JSON.stringify(user2))
   
+    } else if (key == 'clientes: 3') { //Usuario de registro
+
+      user3.foto = "";
+      
+      sessionStorage.setItem('clientes: 3', JSON.stringify(user3))
+      
+
+    }
+  }
+
+
 })
 
 
@@ -57,7 +85,7 @@ for (let i = 0; i < sessionStorage.length; i++) {
                                                       Sala: ${user1.peliculas[1].sala} <br>`;
 
   } else if (key == 'clientes: 0') { //javier
-   
+
     document.getElementById("username").innerHTML = `Información de perfil: ${user2.nombre} <br> Edad: ${user2.edad} <br> Nombre de usuario: ${user2.userName} <br> Email: ${user2.emails}`
     document.getElementById("historial1").innerHTML = `Titulo: ${user2.peliculas[0].titulo} <br>
                                                       Fecha: ${user2.peliculas[0].fecha} <br>
@@ -82,24 +110,49 @@ for (let i = 0; i < sessionStorage.length; i++) {
                                                       Horario: ${user3.peliculas[1].horario} <br>
                                                       Nº Entradas: ${user3.peliculas[1].n_entradas} <br>
                                                       Sala: ${user3.peliculas[1].sala} <br>`;
-                                                    
-   
+
+
   }
 }
 
 
-  //TODO----------tenemos que coger la key mirar en peliculas y cambiarla o borrarla para que no se vea ni se recarge
+//TODO----------tenemos que coger la key mirar en peliculas y cambiarla o borrarla para que no se vea ni se recarge
 
 
 
-  //BORRAR HISTORIAL
-  document.getElementById('borrarHistorial').addEventListener('click', () => {
-    user2.peliculas = [];
-    console.log('borrado')
-    sessionStorage.setItem(`clientes: 0`, JSON.stringify(user2))
-  document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
-  }) 
-  // console.log(JSON.parse(sessionStorage.getItem(`clientes: 0`)))
+//BORRAR HISTORIAL
+document.getElementById('borrarHistorial').addEventListener('click', () => {
+
+  for (let i = 0; i < sessionStorage.length; i++) {
+    let key = sessionStorage.key(i);
+
+    if (key == 'clientes: 1') { //Yann
+
+      user1.peliculas = [];
+      console.log('borrado')
+      sessionStorage.setItem('clientes: 1', JSON.stringify(user1))
+      document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
+
+
+    } else if (key == 'clientes: 0') { //javier
+
+      user2.peliculas = [];
+      console.log('borrado')
+      sessionStorage.setItem('clientes: 0', JSON.stringify(user2))
+      document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
+
+    } else if (key == 'clientes: 3') { //Usuario de registro
+
+      user3.peliculas = [];
+      console.log('borrado')
+      sessionStorage.setItem('clientes: 3', JSON.stringify(user3))
+      document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
+
+    }
+  }
+})
+
+// console.log(JSON.parse(sessionStorage.getItem(`clientes: 0`)))
 
 
 
@@ -111,6 +164,6 @@ for (let i = 0; i < sessionStorage.length; i++) {
 
 // TODO-------------------principio LogOut
 
-document.getElementById('logout').addEventListener('click', ()=> {
+document.getElementById('logout').addEventListener('click', () => {
   location.assign("index.html");
 })
