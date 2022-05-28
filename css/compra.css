@@ -121,7 +121,7 @@ body {
     background: gray;
     opacity: 0.5;
     color: white;
-    font-size: 11px;
+    font-size: 13px;
     padding: 10px;
     margin-top: 40px;
     cursor: pointer;
@@ -273,7 +273,7 @@ body {
   margin: 3%;
 }
 
-#nombreP, #numEntradas, #horario, #diaP {
+#nombreP, #numEntradas, #horario {
   color: gray;
   font: 25px Arial, sans-serif;
   margin: 1%;
@@ -296,9 +296,9 @@ body {
 
 /* Comienza el Compra */
 #contenedor {
+  display: flex;
+  
   position: absolute;
-  z-index: 3;
-  display: none;
   flex-wrap: wrap;
   justify-content: center;
   height: 90%;
@@ -381,18 +381,22 @@ body {
   margin: 0.6em 0;
   font-size: 1rem;
   padding: 0 1.3em;
-  border: solid 2px gray;
+  border: solid 2px grey;
+ 
 }
 .active{
-  border: solid 3px lightcoral;
+  border: solid 3px li;
 }
+/* #botonH2 :active{
+    border: solid 5px red;
+ } */
 
 #calendarioCarrito {
   display: flex;
   flex-wrap: wrap;
   border: solid 2px grey;
-  height: 10%;
-  width: 32%;
+  height: 7%;
+  width: 30%;
   border-radius: 5%;
   /* margin-bottom: 10px; */
   /* margin-top: 7%; */
