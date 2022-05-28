@@ -375,14 +375,37 @@ border-radius: 6px;
 /* Final del carrito */
 
 /* Comienza el Compra */
-#contenedor {
-  position: absolute;
-  z-index: 3;
-  display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 90%;
+.btngr {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgb(239 128 128);
+  border-radius: 100px;
+  background-color: transparent;
+  color: rgb(239 128 128);
+  cursor: pointer;
+  position: relative;
+  bottom: 630px;;
+  left: 777px;
 
+}
+#contenedorMax {
+  display: none;
+}
+
+#contenedor {
+
+    z-index: 3;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 90%;
+    width: 1512px;
+    height: 561px;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    margin-top: 204px;
+    margin-left: 309px;
 }
 
 #tituloP{

@@ -6,7 +6,7 @@ function getMovies (){ //COGER EL JSON DE LA API
     fetch(URL)
     .then(res => res.json())
     .then(json => {
-        console.log(json);
+        // console.log(json);
     //CARGAR IMÁGENES DE LA API A LOS ID DEL HTML
 img1 = `${URLIMG}iwnQ1JH1wdWrGYkgWySptJ5284A.jpg`; 
 img2 = `${URLIMG}77i7EBUyQKOUiZeYQ5tWDGQb0AI.jpg`;
@@ -43,7 +43,7 @@ json.results[17].overview, json.results[18].overview, json.results[19].overview]
 for(let i=0; i<overviews.length; i++){
     
     sinopsis = overviews[i]
-    console.log(sinopsis);
+    // console.log(sinopsis);
     document.getElementById(`sinop${i}`).textContent = sinopsis;
 }
 
@@ -67,14 +67,15 @@ for(let i=0; i<overviews.length; i++){
 for(let j=0; j<=9; j++){
     var poster = document.getElementById(`cartel${j}`);
     
-    poster.addEventListener('click', function(){
-        if(contenedor.style.display == 'none')
-        contenedor = document.getElementById('contenedor').style.display = 'block';
-        else{
-            function ocultarPop(){
-            contenedor = document.getElementById('contenedor').style.display = 'none'
-        }
-    }
+    poster.addEventListener('click', ()=>{
+        mostrar(contenedor)
+    //     if(contenedor.style.display == 'none')
+    //     contenedor = document.getElementById('contenedor').style.display = 'block';
+    //     else{
+    //         // function ocultarPop(){
+    //         contenedor = document.getElementById('contenedor').style.display = 'none'
+    //     // }
+    // }
         if(j == 0){
             // JSON.parse(localStorage.setItem("img1", img1)); //Guardo la imagen
             
@@ -147,10 +148,203 @@ for(let j=0; j<=9; j++){
 
 this.getMovies()
 
-
-var contenedor = document.getElementById('contenedor'); //Aquí estoy intentando ocultar el popup si clikeo en el div del fondo
-        if(contenedor){
-        function ocultarPop(){    
-            contenedor.style.display = 'none';
-        }
+function mostrar(id) {
+    let test = document.getElementById('contenedorMax');
+    if (test.style.display == 'block') {
+        test.style.display = 'none';
+    } else {
+        test.style.display = 'block'
+    }
 }
+function btnGr(id) {
+    let test = document.getElementById('contenedorMax');
+    if (test.style.display == 'inline') {
+        test.style.display = 'block';
+    } else {
+        test.style.display = 'none'
+    }
+}
+
+// var contenedor = document.getElementById('contenedor'); //Aquí estoy intentando ocultar el popup si clikeo en el div del fondo
+//         if(contenedor){
+//         function ocultarPop(){    
+//             contenedor.style.display = 'none';
+//         }
+// }
+
+
+
+//-------------- Empiezan los elementos de la compra 
+
+
+
+
+let userNoReg = {
+    nombre: "",
+    edad: "",
+    userName: "",
+    password: "",
+    emails: "",
+    foto: "",
+  
+    peliculas: [
+      {
+        titulo: document.getElementById("tituloP").innerText,
+        fecha: "a",
+        horario: "Mañana",
+        nEntradas: "2",
+        butacas: [{}],
+        sala: "1",
+      },
+    ],
+  };
+  
+  document.getElementById("nEntradas").addEventListener("click", () => {
+    let entradas = document.getElementById("nEntradas").value;
+    userNoReg.peliculas[0].nEntradas = entradas;
+      document.getElementById("precioTotal").innerHTML = `${5 * entradas}€`;
+    console.log(userNoReg);
+  });
+  
+  document.getElementById("nEntradas").addEventListener("click", () => {
+    let precios = document.getElementById("nEntradas").value;
+    localStorage.setItem("precioEntradas", precios);
+  });
+  document.getElementById("botonH1").addEventListener("click", () => {
+    let horas1 = document.getElementById("botonH1").innerHTML;
+    userNoReg.peliculas[0].horario = horas1;
+    console.log(userNoReg);
+  });
+  document.getElementById("botonH2").addEventListener("click", () => {
+    let horas2 = document.getElementById("botonH2").innerHTML;
+    userNoReg.peliculas[0].horario = horas2;
+    console.log(userNoReg);
+  });
+  document.getElementById("botonH3").addEventListener("click", () => {
+    let horas3 = document.getElementById("botonH3").innerHTML;
+    userNoReg.peliculas[0].horario = horas3;
+    console.log(userNoReg);
+  });
+  
+  document.getElementById("botonCarrito").addEventListener("click", () => {
+    // console.log(document.getElementById("calendarioCarrito").value)
+    let fechas = document.getElementById("calendarioCarrito").value;
+  
+    let nuevaF = fechas.split("-");
+    for (let i = 0; i < nuevaF.length / 2; i++) {
+      let aux = nuevaF[i];
+      nuevaF[i] = nuevaF[nuevaF.length - (1 + i)];
+      nuevaF[nuevaF.length - (1 + i)] = aux;
+    }
+    fechaOrdenada = nuevaF.join("-");
+    userNoReg.peliculas[0].fecha = fechaOrdenada;
+  
+    console.log(userNoReg);
+  });
+  // for (let i = 1; i <= 32; i++) {
+  
+  //    var checkbox = document.getElementById(`asiento${i}`);
+  //    checkbox.addEventListener("change", function () {
+  //      if (this.checked) {
+  //       //  alert(`${i}checked`);
+  
+  //       userNoReg.peliculas[0].butacas.nuevaClave = i;
+  
+  //      }
+  //      //  if (!this.checked) {
+  //      //    localStorage.removeItem(`butacas${i}`);
+  //      //  }
+  //    });
+  //    if(i==32){
+  //       console.log(userNoReg)
+  //    }
+  //  }
+  
+  //
+  //   return fechaOrdenada
+  // let userNoReg =
+  //     {
+  //       "nombre": "",
+  //       "edad": '',
+  //       "userName": "",
+  //       "password": "",
+  //       "emails":  "",
+  //       "foto": "",
+  
+  //       "peliculas": [{
+  //         "titulo": document.getElementById("tituloP").innerText,
+  //         "fecha": 'a',
+  //         "horario": "Mañana",
+  //         "nº entradas": "2",
+  //         "sala": "1"
+  //     }]
+  //     }
+  // });
+  
+  // userNoReg.peliculas[0].butacas[0].nuevaClave='pep'
+  
+  // for(let i=1;i<32;i++){
+  //    document.getElementById(`asiento${i}`).addEventListener("click", () => {
+  //       let prov=`butaca${cont}`
+  //       let butacas = prov
+  //       butacas=document.getElementById("botonH3").innerHTML;
+  //       localStorage.setItem("hora", horas3);
+  //     });
+  // }
+  
+  // let filas=document.getElementsByClassName('section')
+  // for(let i=0;i<filas.length;i++){
+  //    for(let j=1;j<32;j++){
+  //       if(`asiento${j}`){
+  
+  //       }
+  //    }
+  
+  // document.getElementsByClassName("section").addEventListener("click", () => {
+  //   let horas3 = document.getElementById("botonH3").innerHTML;
+  //   localStorage.setItem("hora", horas3);
+  // });
+  
+  localStorage.setItem("titulo", document.getElementById("tituloP").innerText);
+  
+  localStorage.setItem("foto", document.getElementById("cartel1").src);
+  
+  console.log(userNoReg.peliculas[0].titulo);
+  
+  document.getElementById("botonH1").addEventListener("click", () => {
+    if (botonH2.classList.contains("active")) {
+      botonH2.classList.remove("active");
+    }
+    if (botonH3.classList.contains("active")) {
+      botonH3.classList.remove("active");
+    }
+  
+    if (!botonH1.classList.contains("active")) {
+      botonH1.classList.toggle("active");
+    }
+  });
+  document.getElementById("botonH2").addEventListener("click", () => {
+    if (botonH1.classList.contains("active")) {
+      botonH1.classList.remove("active");
+    }
+    if (botonH3.classList.contains("active")) {
+      botonH3.classList.remove("active");
+    }
+    if (!botonH2.classList.contains("active")) {
+      botonH2.classList.toggle("active");
+    }
+  });
+  document.getElementById("botonH3").addEventListener("click", () => {
+    if (botonH1.classList.contains("active")) {
+      botonH1.classList.remove("active");
+    }
+    if (botonH2.classList.contains("active")) {
+      botonH2.classList.remove("active");
+    }
+  
+    if (!botonH3.classList.contains("active")) {
+      botonH3.classList.toggle("active");
+    }
+  });
+  
+//-------------- Terminan los elementos de la compra 

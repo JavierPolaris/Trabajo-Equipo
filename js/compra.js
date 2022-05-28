@@ -21,7 +21,7 @@ let userNoReg = {
 document.getElementById("nEntradas").addEventListener("click", () => {
   let entradas = document.getElementById("nEntradas").value;
   userNoReg.peliculas[0].nEntradas = entradas;
-  //   document.getElementById("precioTotal").innerHTML = `${5 * entradas}€`;
+    document.getElementById("precioTotal").innerHTML = `${5 * entradas}€`;
   console.log(userNoReg);
 });
 
