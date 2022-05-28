@@ -17,6 +17,11 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
   // sessionStorage.setItem(`clientes: ${contador}`, JSON.stringify
 
   imagenPrevisualizacion.src = objetoUrl;
+  //TODO----------tenemos que coger la key mirar en foto y cambiarla para que la foto que elijamos se mantenga en el sesionStorage
+  let imgSesion = JSON.parse(sessionStorage.getItem('clientes: 3'));
+    imgSesion.foto = objetoUrl
+    
+  
 })
 
 
@@ -29,6 +34,7 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
 var user1 = JSON.parse(sessionStorage.getItem('clientes: 1'));
 var user2 = JSON.parse(sessionStorage.getItem('clientes: 0'));
 var user3 = JSON.parse(sessionStorage.getItem('clientes: 3'));
+console.log(user3.foto)
 
 // var userName = sessionStorage.getItem('clientes: 1');
 // console.log(user2.peliculas[0].titulo)
@@ -51,7 +57,7 @@ for (let i = 0; i < sessionStorage.length; i++) {
                                                       Sala: ${user1.peliculas[1].sala} <br>`;
 
   } else if (key == 'clientes: 0') { //javier
-    console.log('clientes: 0')
+   
     document.getElementById("username").innerHTML = `Información de perfil: ${user2.nombre} <br> Edad: ${user2.edad} <br> Nombre de usuario: ${user2.userName} <br> Email: ${user2.emails}`
     document.getElementById("historial1").innerHTML = `Titulo: ${user2.peliculas[0].titulo} <br>
                                                       Fecha: ${user2.peliculas[0].fecha} <br>
@@ -64,6 +70,7 @@ for (let i = 0; i < sessionStorage.length; i++) {
                                                       Nº Entradas: ${user2.peliculas[1].n_entradas} <br>
                                                       Sala: ${user2.peliculas[1].sala} <br>`;
   } else if (key == 'clientes: 3') {
+    imagenPrevisualizacion.src = `${user3.foto}`
     document.getElementById("username").innerHTML = `Información de perfil: ${user3.userName} <br> PassWord: ${user3.password}<br> Email: ${user3.emails}`
     document.getElementById("historial1").innerHTML = `Titulo: ${user3.peliculas[0].titulo} <br>
                                                       Fecha: ${user3.peliculas[0].fecha} <br>
@@ -75,6 +82,8 @@ for (let i = 0; i < sessionStorage.length; i++) {
                                                       Horario: ${user3.peliculas[1].horario} <br>
                                                       Nº Entradas: ${user3.peliculas[1].n_entradas} <br>
                                                       Sala: ${user3.peliculas[1].sala} <br>`;
+                                                    
+   
   }
 }
 

@@ -33,12 +33,16 @@ body {
 
 .navbar a {
   text-decoration: none;
-  color: inherit;
+  /* color: inherit; */
+  color: white;
 
 }
 
 .logo {
   margin-right: 50px;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  
 }
 
 .list {
@@ -80,6 +84,30 @@ body {
   }
 }
 
+
+#logout {
+
+  padding: 1px 30px;
+  border: none;
+  background-color: #f7f7f7;
+  color: #878787;
+  border-radius: 6px;
+  cursor: pointer;
+
+
+}
+#logout:hover {
+  background-color: #996c6f;
+  color: #ffffff;
+  transform: translateY(-2px);
+  border-radius: 6px;
+  }
+.btnNad:hover {
+background-color: #996c6f;
+color: #ffffff;
+transform: translateY(-2px);
+border-radius: 6px;
+}
 /* Final del nadVar */
 
 /* Comienzo de tarjetas */
@@ -245,6 +273,58 @@ body {
 }
 
 /* Final del Registro*/
+/* COMIENZO DE TUCINE */
+#perfil {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar{
+  margin-left: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#fotoUsuario {
+
+  width: 169px;
+  height: 178px;
+  border-radius: 88px;
+}
+
+ 
+ #cajaGigante{
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ }
+ #historiales{
+  padding: 10px 84px 14px 74px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow:  5px 5px 10px #b5b5b5,
+               -5px -5px 10px #ffffff;
+  display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+ }
+ 
+ /* FIN DE TU CINE*/
+
+
+
+
+
+
+
 
 /* Comienzo del carrito */
 #entrada1 {
@@ -397,7 +477,7 @@ body {
   /* margin-bottom: 7%; */
   /* padding: 1%; */
 }
-
+ 
 
 #botonCarrito {
   display: flex;

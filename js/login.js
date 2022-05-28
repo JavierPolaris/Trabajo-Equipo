@@ -10,7 +10,8 @@ let userReg = [
     "edad": 35,
     "userName": "Polaris",
     "password": "1234",
-    "Emails": "javi@gmail.com",
+    "emails": "javi@gmail.com",
+    "foto": "",
     "peliculas": [{
       "titulo": "titul de pelicula d ejavi",
       "fecha": "10/05/22",
@@ -29,6 +30,7 @@ let userReg = [
     "userName": "Yann",
     "password": "4321",
     "emails": "yaan@gmail.com",
+    "foto": "",
     "peliculas": [{
       "titulo": "hola pesao peliucla d eyann",
       "fecha": "07/01/2022",
@@ -66,6 +68,7 @@ document.getElementById('logIn').addEventListener('click', (e) => {
       "userName": "Polaris",
       "password": "1234",
       "emails": "javi@gmail.com",
+      "foto": "",
       "peliculas": [{
         "titulo": '"Lo que el viento se llevó"',
         "fecha": "01/12/2022",
@@ -94,6 +97,7 @@ document.getElementById('logIn').addEventListener('click', (e) => {
       "userName": "Yann",
       "password": "4321",
       "emails": "yaan@gmail.com",
+      "foto": "",
       "peliculas": [{
         "titulo": '"Casablanca"',
         "fecha": "15/04/2022",
@@ -240,7 +244,7 @@ form.addEventListener('submit', (e) => {
     "userName": formUser.value,
     "password": formPass.value,
     "emails": formEmail.value,
-    "foto": "",
+    "foto": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_640.png",
     "peliculas": [{
       "titulo": "",
       "fecha": "",
