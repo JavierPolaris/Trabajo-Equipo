@@ -3,10 +3,6 @@
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8ade9d1b0923873b330adeea66d9016f5468c6b9
 //Creo un JSON con los usuarios predefinidos
 let userReg = [
   {
@@ -117,28 +113,7 @@ document.getElementById('logIn').addEventListener('click', (e) => {
     }))
     location.assign("tucine.html");
   }else {
-    console.log('no estas registrado')
-
-
-  localStorage.setItem(`clientes: 1`, JSON.stringify({
-    "nombre": "Yann Poirot",
-    "edad": 30,
-    "userName": "Yann",
-    "password": "4321",
-    "emails": "yaan@gmail.com",
-    "peliculas": [{
-      "titulo": "",
-      "fecha": "",
-      "horario": "",
-      "nº entradas": "",
-      "sala": "",
-  
-    }]
-  
-  }))
-  location.assign("tucine.html");
-
-  }else console.log('no estas registrado')
+    console.log('no estas registrado')}
 
 });
 // creo el boton registro para redireccionarnos al registro
