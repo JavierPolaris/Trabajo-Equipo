@@ -72,31 +72,31 @@ for (let i = 0; i < sessionStorage.length; i++) {
 
   if (key == 'clientes: 1') {//yann
     // console.log('clientes: 1')
-    document.getElementById("username").innerHTML = `Información de perfil: ${user1.nombre} <br> Edad: ${user1.edad} <br> Nombre de usuario: ${user1.userName} <br> Email: ${user1.emails}`;
-    document.getElementById("historial1").innerHTML = `Titulo: ${user1.peliculas[0].titulo} <br>
-                                                      Fecha: ${user1.peliculas[0].fecha} <br>
-                                                      Horario: ${user1.peliculas[0].horario} <br>
-                                                      Nº Entradas: ${user1.peliculas[0].n_entradas} <br>
-                                                      Sala: ${user1.peliculas[1].sala} <br><br>
-                                                      Titulo: ${user1.peliculas[1].titulo} <br>
-                                                      Fecha: ${user1.peliculas[1].fecha} <br>
-                                                      Horario: ${user1.peliculas[1].horario} <br>
-                                                      Nº Entradas: ${user1.peliculas[1].n_entradas} <br>
-                                                      Sala: ${user1.peliculas[1].sala} <br>`;
-
-  } else if (key == 'clientes: 0') { //javier
-
-    document.getElementById("username").innerHTML = `Información de perfil: ${user2.nombre} <br> Edad: ${user2.edad} <br> Nombre de usuario: ${user2.userName} <br> Email: ${user2.emails}`
+    document.getElementById("username").innerHTML = `Información de perfil: ${user2.nombre} <br> Edad: ${user2.edad} <br> Nombre de usuario: ${user2.userName} <br> Email: ${user2.emails}`;
     document.getElementById("historial1").innerHTML = `Titulo: ${user2.peliculas[0].titulo} <br>
                                                       Fecha: ${user2.peliculas[0].fecha} <br>
                                                       Horario: ${user2.peliculas[0].horario} <br>
                                                       Nº Entradas: ${user2.peliculas[0].n_entradas} <br>
-                                                      Sala: ${user2.peliculas[0].sala} <br><br>
+                                                      Sala: ${user2.peliculas[1].sala} <br><br>
                                                       Titulo: ${user2.peliculas[1].titulo} <br>
                                                       Fecha: ${user2.peliculas[1].fecha} <br>
                                                       Horario: ${user2.peliculas[1].horario} <br>
                                                       Nº Entradas: ${user2.peliculas[1].n_entradas} <br>
                                                       Sala: ${user2.peliculas[1].sala} <br>`;
+
+  } else if (key == 'clientes: 0') { //javier
+
+    document.getElementById("username").innerHTML = `Información de perfil: ${user1.nombre} <br> Edad: ${user1.edad} <br> Nombre de usuario: ${user1.userName} <br> Email: ${user1.emails}`
+    document.getElementById("historial1").innerHTML = `Titulo: ${user1.peliculas[0].titulo} <br>
+                                                      Fecha: ${user1.peliculas[0].fecha} <br>
+                                                      Horario: ${user1.peliculas[0].horario} <br>
+                                                      Nº Entradas: ${user1.peliculas[0].n_entradas} <br>
+                                                      Sala: ${user1.peliculas[0].sala} <br><br>
+                                                      Titulo: ${user1.peliculas[1].titulo} <br>
+                                                      Fecha: ${user1.peliculas[1].fecha} <br>
+                                                      Horario: ${user1.peliculas[1].horario} <br>
+                                                      Nº Entradas: ${user1.peliculas[1].n_entradas} <br>
+                                                      Sala: ${user1.peliculas[1].sala} <br>`;
   } else if (key == 'clientes: 3') {
     // imagenPrevisualizacion.src = `${user3.foto}`
     document.getElementById("username").innerHTML = `Información de perfil: ${user3.userName} <br> PassWord: ${user3.password}<br> Email: ${user3.emails}`
