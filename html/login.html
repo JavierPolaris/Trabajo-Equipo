@@ -6,58 +6,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Importo el logo de la hamburguesa -->
      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-     <link rel="stylesheet" href="/css/index.css">
-     <title>Home</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>LogIn</title>
 </head>
 <body>
 
   <!-- Principio del nadVar -->
 <nav class="navbar container">
+
     <a href="index.html" class="logo">Cines Paradiso</a>
+
+ 
     <input type="checkbox" id="toggler">
     <label for="toggler"><i class="ri-menu-line"></i> </label>
     <a href="https://www.academiadecine.com"><img  class="logo1"src="/css/Logo_de_la_Academia_de_Cine_de_España.png" alt=""></a>
-    <input type="checkbox" id="toggler">
-    <label for="toggler"><i class="ri-menu-line"></i> </label>
+
     <div class="menu">
         <ul class="list">
+
           <li class="btnNad"><a href="cartelera.html">Cartelera</a> </li>
           <li class="btnNad"><a href="historia.html">Historia</a> </li>
           <!-- <li class="btnNad"><a href="TueEntrada.htm">Tu Entrada</a> </li> -->
-
+           
           <li class="btnNad"><a href="carrito.html">🛒</a> </li>
-
           <li class="btnNad"><a href="login.html">LogIn</a> </li>
+
         </ul>
     </div>
 </nav>
   <!-- Final del nadVar -->
 
-  <div class="nacMal">
-    <a href="https://festivaldemalaga.com"> <img src="/css/Captura de Pantalla 2022-05-30 a las 16.23.52.png" alt=""></a>
-  </div>
-  <section>
-    <div class="noticias">
-      <h2 class="seccion" style="border-bottom: 1px solid black ;"> Noticias</h2>
-   
-      <img src="https://festivaldemalaga.com/Content/source/img/noticias/20220326201753_1942_foto_1.jpg" alt="">
-      <div class="noticias">
-        <h2 class="seccion" style="border-bottom: 1px solid black ;"> Un maratón con las películas premiadas pone punto final al 25 Festival de Málaga</h2>
-        <div class="parrafo">
-          <p class="parrafo"><b>‘Utama’,</b> la ganadora de la <b>Biznaga de Oro a la Mejor Película Iberoamericana</b> en la sección oficial, será la encargada de comenzar esta<br>programación especial con el palmarés de 2022. A las 16:00, en la sala 1. <br><br>El pase del <b>Premio al Mejor Documental, ‘El silencio del topo’,</b><br>será a las 16:45 en la sala 2. Este primer bloque se completará con la proyección del <b>Premio del Público de ZonaZine, ‘Libélulas’</b>, a las 16:30 en la sala 3.<br><br>
 
-            A media tarde se reanudará el maratón con el <b>Premio Especial del Jurado</b> de la sección oficial, <b>‘Mi vacío y yo’</b>, en la sala 1 a las 19:00.<br><br>
-            <b>‘Lugares a los que nunca hemos ido’</b>, ganadora a la <b>Mejor Película Española</b> de ZonaZine da comienza poco después, a las 19:15, en la sala 3.<br><br> En la sala 2,
-            podrá verse <b>‘La visita y un jardín secreto’, Premio del Público de Documentales</b>, y en la tres,<b> ‘Mostro’, Mejor Película Iberoamericana de Zonazine</b>. Ambas comienzan a las 21:30.<br><br>
-
-            
-            Por último, en la sala 1 del Paradiso a las 22:00, la ganadora de la sección oficial,<b> Biznaga de Oro a la Mejor Película Española, ‘Cinco lobitos’,</b><br>
-            cierra esta programación especial con la que el 25 Festival de Málaga se despide hasta el próximo año.<br>
-            
-            Las entradas se pueden adquirir tanto en las taquillas del <b>Cine Paradiso</b>.</p>
-        </div>
+ <!-- Principio del LogIn -->
+<div class="containerForm" id="containerForm">
+  <div class="log" id="log">
+    <h1 id="cabezaForm" class="cabezaLog">Aceso</h1>
+    <form action=" " class="formLog">
+        <input class="imput" type="text" name="usuario" id="usuario" placeholder="usuario" required><br>
+        <input class="imput" type="password" name="pass" id="pass" placeholder="Contraseña" required><br>
+        <div class="botonera">
+        <button id="logIn" class="submitBtn" type="submit">Entrar</button>
+        <button id="registrarse" class="submitBtn">Registrarse</button>
     </div>
-  </section>
+    </form>
+  </div>
+
+<div class="registro" id="registro">
+    <h1 id="cabezaRegistro" class="cabezaLog">Registro</h1>
+    <form id="form" action="">
+      <input
+        class="imput"
+        type="text"
+        name="user"
+        id="user"
+        placeholder="usuario"
+        minlength="1"
+        maxlength="15"
+        spellcheck="false"
+        required
+      > <br>
+      <input
+      class="imput"
+        type="email"
+        name="email"
+        id="email"
+        placeholder="usuario@gmail.com"
+        required
+      ><br>
+      <input
+      class="imput"
+        type="email"
+        name="emailConf"
+        id="emailConf"
+        placeholder="confirma correo"
+        autocomplete="off"
+        required
+        ><br>
+      <input
+      class="imput"
+        type="password"
+        name="passFr"
+        id="passFr"
+        placeholder="Contraseña"
+        autocomplete="off"
+        ><br>
+      <input
+      class="imput"
+        type="password"
+        name="passConf"
+        id="passConf"
+        placeholder="Confirma contraseña"
+        autocomplete="off"
+        ><br>
+      <button id="registrarUser" class="submitBtn" type="submit">Registrarse</button>
+  </form>
+  </div>
+</div>
+
+
+
+ <!-- Final del LogIn -->
 
 
 
@@ -85,7 +133,7 @@
         </div>
         
         <ul class="footer__nav">
-        
+          
           
           <li class="nav__item nav__item--extra">
             <h2 class="nav__title">Tecnología</h2>
@@ -138,6 +186,9 @@
     <!-- Final del footer -->
 
 
-    <script src="/js/index.js"></script>
+    <script src="/js/login.js"></script>
+<!--     <script src="/js/tucine.js"></script>
+ -->
+
 </body>
 </html>

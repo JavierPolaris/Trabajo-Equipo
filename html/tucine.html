@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Importo el logo de la hamburguesa -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Tu Cine</title>
+</head>
+
+<body>
+ 
+  <!-- Principio del nadVar -->
+  <nav class="navbar container">
+    <a href="/html/indexLog.html" class="logo">Cines Paradiso</a>
+    <input type="checkbox" id="toggler">
+    <label for="toggler"><i class="ri-menu-line"></i> </label>
+    <a href="https://www.academiadecine.com"><img  class="logo2"src="/css/Logo_de_la_Academia_de_Cine_de_España.png" alt=""></a>
+
+    <div class="menu">
+      <ul class="list">
+        <li class="btnNad"><a href="carteleraLog.html">Cartelera</a> </li>
+        <li class="btnNad"><a href="historiaLog.html">Historia</a> </li>
+        <!-- <li class="btnNad"><a href="#">Tu Entrada</a> </li> -->
+        <li class="btnNad"><a href="tucine.html">Tu Cine</a> </li>
+        <li class="btnNad"><a href="carritoLog.html">🛒</a> </li>
+        <li class="btnNad"><button id="logout">LogOut</button> </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Final del nadVar -->
+
+
+  <!-- TUCINE YANN-->
+  <div id="contenedortodo">
+    
+      <div id="cajaGigante">
+        <div id="perfil">
+          <div id="avatar" class="avatar">
+            <img 
+              src="https://www.ganaderia.com/img/default.jpg"
+              id="fotoUsuario">
+            <div id="infoPersonal">
+              <p id="username"></p>
+              <label for="CambiarFoto">Cambiar avatar: <br></label>
+              <input type="file" id="seleccionArchivos" name="file" accept="image/*">
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div id="historiales" class="historiales">
+
+          <h2 id="titlo">HISTORIAL</h2>
+
+          <p id="historial1">
+          </p>
+
+          <div id="borrarHistorial">
+            <input type="button" value="Borrar historial" id="borrarHistorial"/>
+          </div>
+        </div>
+      </div>
+     
+
+   
+  </div>
+
+
+
+
+  <!-- Principio del footer -->
+  <footer class="footer">
+    <div class="footer__addr">
+      <h1 class="footer__logo">Miscelania</h1>
+
+      <h2>Contacto</h2>
+
+      <address>
+        41920 San Juan de Aznalfarache(Sevilla). La Banda<br>
+
+        <a class="footer__btn" href="mailto:example@gmail.com">Email</a>
+      </address>
+    </div>
+
+    <ul class="footer__nav">
+      
+
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Tecnología</h2>
+
+        <ul class="nav__ul nav__ul--extra">
+          <li>
+            <a href="https://es.wikipedia.org/wiki/Cinerama">Cinerama</a>
+          </li>
+
+          <li>
+            <a href="https://es.wikipedia.org/wiki/VistaVision">Vistavision</a>
+          </li>
+
+          <li>
+            <a href="https://es.wikipedia.org/wiki/IMAX">IMAX</a>
+          </li>
+
+          <li>
+            <a href="https://es.wikipedia.org/wiki/Cinemascope">Cinemascope</a>
+          </li>
+
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+
+        <ul class="nav__ul">
+          <li>
+            <a href="https://www.privacypolicies.com/es/generador-politicas-privacidad/">Politica de Privacidad</a>
+          </li>
+
+          <li>
+            <a href="https://c.tenor.com/XtqQwrSn9qIAAAAM/spank-tom-and-jerry.gif">Protección de datos</a>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+
+    <div class="legal">
+      <p>&copy; 2022. All rights reserved.</p>
+
+      <div class="legal__links">
+        <span>Desing by <span class="heart">♥</span> Los ginetes del Love and Thunder </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Final del footer -->
+
+
+  <script src="/js/tucine.js"></script>
+  <script> document.getElementById('logout').addEventListener('click', ()=> {
+    location.assign("index.html");
+  })</script>
+</body>
+
+</html>
