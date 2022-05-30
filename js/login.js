@@ -1616,7 +1616,7 @@ const checkPassFormat = (pass) => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  sessionStorage.clear();
+ 
   // verifica el formato de usuario
   if (!userExp.test(formUser.value)) {
     alert('Usuario no valido'); return;
@@ -1657,14 +1657,531 @@ form.addEventListener('submit', (e) => {
   // !-------------------comienzo LocalStorage registro
 
 
-  sessionStorage.setItem(`clientes: 3`, JSON.stringify({
+  localStorage.setItem(`clientes: 3`, JSON.stringify({
     "nombre": "",
     "edad": "",
     "userName": formUser.value,
     "password": formPass.value,
     "emails": formEmail.value,
     "foto": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973461_640.png",
-    "peliculas": []
+    "peliculas": [
+      {
+        titulo: "",
+        fecha: "",
+        horario: "",
+        nEntradas: "",
+        butacas: [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        sala: "1",
+      },
+
+      {
+        titulo: "",
+        fecha: "",
+        horario: "",
+        nEntradas: "",
+        butacas: [{
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }],
+        sala: "3",
+      },
+      {
+        titulo: "",
+        fecha: "",
+        horario: "",
+        nEntradas: "",
+        butacas: [{
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        }],
+        
+      },
+      {
+        titulo: "",
+        fecha: "",
+        horario: "",
+        nEntradas: "",
+        butacas: [{
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        }],
+        
+      },
+      {
+        titulo: "",
+        fecha: "",
+        horario: "",
+        nEntradas: "",
+        butacas: [{
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        },
+        {
+  
+        }],
+        
+      },
+    ],
   } ))
   
 
@@ -1692,47 +2209,7 @@ document.getElementById('logout').addEventListener('click', () => {
 
 // TODO-------------------principio CARRITO
 
-class Carrito {
-  constructor(clave) {
-    this.clave = clave || "pelicula";
-    this.pelicula = this.obtener();
-  }
-  // agregar que recibe un producto y lo agrega en caso de que no exista.
-  agregar(pelicula) {
-    if (!this.existe(peliculas.id)) {
-      this.peliculas.push(pelicula);
-      this.guardar();
-    }
-  }
 
-  quitar(id) {
-    const indice = this.peliculas.findIndex(p => p.id === id);
-    if (indice != -1) {
-      this.peliculas.splice(indice, 1);
-      this.guardar();
-    }
-  }
-
-
-  guardar() {
-    localStorage.setItem(this.clave, JSON.stringify(this.peliculas));
-  }
-  // obtener que devuelve el arreglo de productos
-  obtener() {
-    const peliculasCodificados = localStorage.getItem(this.clave);
-    return JSON.parse(peliculasCodificados) || [];
-  }
-
-  existe(id) {
-    return this.peliculas.find(pelicula => pelicula.id === id);
-  }
-
-  obtenerConteo() {
-    return this.peliculas.length;
-  }
-
-
-}
 
 
 

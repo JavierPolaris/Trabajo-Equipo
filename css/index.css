@@ -332,7 +332,9 @@ border-radius: 6px;
 
 
 /* Comienzo del carrito */
-#entrada1 {
+#entrada1,
+#entrada2,
+#entrada3 {
   display: flex;
   align-items: center;
   width: 98%;
@@ -529,6 +531,11 @@ border-radius: 6px;
   padding: 0 1.3em;
   border: solid 2px gray;
 }
+#botonCarrito:active{
+  border: solid 3px lightcoral;
+
+}
+
 .horCaBo {
   display: flex;
  
@@ -543,6 +550,12 @@ border-radius: 6px;
   width: 13%;
   border: solid 2px grey;
   margin: 2%;
+}
+
+#entradas{
+  display: flex;
+  flex-direction: column;
+  height: 30%;
 }
 
 /* Termina carrito */

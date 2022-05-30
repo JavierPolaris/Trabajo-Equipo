@@ -60,69 +60,8 @@ document.getElementById("botonCarrito").addEventListener("click", () => {
 
   console.log(userNoReg);
 });
-// for (let i = 1; i <= 32; i++) {
 
-//    var checkbox = document.getElementById(`asiento${i}`);
-//    checkbox.addEventListener("change", function () {
-//      if (this.checked) {
-//       //  alert(`${i}checked`);
 
-//       userNoReg.peliculas[0].butacas.nuevaClave = i;
-
-//      }
-//      //  if (!this.checked) {
-//      //    localStorage.removeItem(`butacas${i}`);
-//      //  }
-//    });
-//    if(i==32){
-//       console.log(userNoReg)
-//    }
-//  }
-
-//
-//   return fechaOrdenada
-// let userNoReg =
-//     {
-//       "nombre": "",
-//       "edad": '',
-//       "userName": "",
-//       "password": "",
-//       "emails":  "",
-//       "foto": "",
-
-//       "peliculas": [{
-//         "titulo": document.getElementById("tituloP").innerText,
-//         "fecha": 'a',
-//         "horario": "Mañana",
-//         "nº entradas": "2",
-//         "sala": "1"
-//     }]
-//     }
-// });
-
-// userNoReg.peliculas[0].butacas[0].nuevaClave='pep'
-
-// for(let i=1;i<32;i++){
-//    document.getElementById(`asiento${i}`).addEventListener("click", () => {
-//       let prov=`butaca${cont}`
-//       let butacas = prov
-//       butacas=document.getElementById("botonH3").innerHTML;
-//       localStorage.setItem("hora", horas3);
-//     });
-// }
-
-// let filas=document.getElementsByClassName('section')
-// for(let i=0;i<filas.length;i++){
-//    for(let j=1;j<32;j++){
-//       if(`asiento${j}`){
-
-//       }
-//    }
-
-// document.getElementsByClassName("section").addEventListener("click", () => {
-//   let horas3 = document.getElementById("botonH3").innerHTML;
-//   localStorage.setItem("hora", horas3);
-// });
 
 localStorage.setItem("titulo", document.getElementById("tituloP").innerText);
 

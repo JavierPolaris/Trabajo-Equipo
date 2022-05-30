@@ -164,7 +164,7 @@ function btnGr(id) {
 
 let usuario0 = JSON.parse(sessionStorage.getItem('clientes: 0'))
 let usuario1 = JSON.parse(sessionStorage.getItem('clientes: 1'))
-let usuario3 = JSON.parse(sessionStorage.getItem('clientes: 3'))
+let usuario3 = JSON.parse(localStorage.getItem('clientes: 3'))
 
 
 
@@ -213,7 +213,7 @@ let userNoReg = {
     } else if (usuario1 != null) {
       usuario1.peliculas[(k + 2)].horario = horas1;
     } else if (usuario3 != null) {
-      usuario3.peliculas[(k + 2)].horario = horas1;
+      usuario3.peliculas[k].horario = horas1;
     } else {
       userNoReg.peliculas[k].horario = horas1;
     }
@@ -228,7 +228,7 @@ let userNoReg = {
   } else if (usuario1 != null) {
     usuario1.peliculas[(k + 2)].horario = horas2;
   } else if (usuario3 != null) {
-    usuario3.peliculas[(k + 2)].horario = horas2;
+    usuario3.peliculas[k].horario = horas2;
   } else {
     userNoReg.peliculas[k].horario = horas1;
   }
@@ -241,7 +241,7 @@ document.getElementById("botonH3").addEventListener("click", () => {
   } else if (usuario1 != null) {
     usuario1.peliculas[(k + 2)].horario = horas3;
   } else if (usuario3 != null) {
-    usuario3.peliculas[(k + 2)].horario = horas3;
+    usuario3.peliculas[k].horario = horas3;
   } else {
     userNoReg.peliculas[k].horario = horas1;
   }
@@ -249,6 +249,11 @@ document.getElementById("botonH3").addEventListener("click", () => {
 });
   
 document.getElementById("botonCarrito").addEventListener("click", () => {
+  //TODO---------------- conseguir que esto funcione
+  if (!botonCarrito.classList.contains("active")) {
+    botonCarrito.classList.toggle("active");
+  }
+  sessionStorage.clear();
   let fechas = document.getElementById("calendarioCarrito").value;
 
   let nuevaF = fechas.split("-");
@@ -263,7 +268,7 @@ document.getElementById("botonCarrito").addEventListener("click", () => {
   } else if (usuario1 != null) {
     usuario1.peliculas[(k + 2)].fecha = fechaOrdenada;
   } else if (usuario3 != null) {
-    usuario3.peliculas[(k + 2)].fecha = fechaOrdenada;
+    usuario3.peliculas[k].fecha = fechaOrdenada;
   } else {
     userNoReg.peliculas[k].fecha = fechaOrdenada;
   }
@@ -273,7 +278,7 @@ document.getElementById("botonCarrito").addEventListener("click", () => {
   } else if (usuario1 != null) {
     usuario1.peliculas[(k + 2)].titulo = document.getElementById('tituloP').innerText;
   } else if (usuario3 != null) {
-    usuario3.peliculas[(k + 2)].titulo = document.getElementById('tituloP').innerText;
+    usuario3.peliculas[k].titulo = document.getElementById('tituloP').innerText;
   } else {
     userNoReg.peliculas[k].titulo = document.getElementById('tituloP').innerText;
   }
@@ -283,15 +288,20 @@ document.getElementById("botonCarrito").addEventListener("click", () => {
   } else if (usuario1 != null) {
     usuario1.peliculas[(k + 2)].cartel = document.getElementById('cartelComp').src;
   } else if (usuario3 != null) {
-    usuario3.peliculas[(k + 2)].cartel = document.getElementById('cartelComp').src;
+    usuario3.peliculas[k].cartel = document.getElementById('cartelComp').src;
   } else {
     userNoReg.peliculas[k].cartel = document.getElementById('cartelComp').src;
   }
 
-  localStorage.setItem('usuario2', JSON.stringify(userNoReg))
-  sessionStorage.setItem('usuario0', JSON.stringify(usuario0))
-  sessionStorage.setItem('usuario1', JSON.stringify(usuario1))
-  sessionStorage.setItem('usuario3', JSON.stringify(usuario3))
+  if (usuario0 != null) {
+    sessionStorage.setItem('clientes: 0', JSON.stringify(usuario0))
+  } else if (usuario1 != null) {
+    sessionStorage.setItem('clientes: 1', JSON.stringify(usuario1))
+  } else if (usuario3 != null) {
+    localStorage.setItem('clientes: 3', JSON.stringify(usuario3))
+  } else {
+    localStorage.setItem('clientes: 2', JSON.stringify(userNoReg))
+  }
   k++
 
   console.log(userNoReg);

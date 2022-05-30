@@ -1,7 +1,7 @@
-let userNoReg = JSON.parse(localStorage.getItem('usuario2'))
-let usuario0 = JSON.parse(sessionStorage.getItem('usuario0'))
-let usuario1 = JSON.parse(sessionStorage.getItem('usuario1'))
-let usuario3 = JSON.parse(sessionStorage.getItem('usuario3'))
+let userNoReg = JSON.parse(localStorage.getItem('clientes: 2'))
+let usuario0 = JSON.parse(sessionStorage.getItem('clientes: 0'))
+let usuario1 = JSON.parse(sessionStorage.getItem('clientes: 1'))
+let usuario3 = JSON.parse(sessionStorage.getItem('clientes: 3'))
 
 
 
@@ -129,27 +129,123 @@ for (let i = 0; i <= 2; i++) {
 }
 
 
-document.getElementById('borrar1').addEventListener("click", () => {
-        document.getElementById('entradas').removeChild(document.getElementById('entrada1'))
-        delete userNoReg.peliculas[0]
-        console.log(userNoReg)
-    
 
-})
-document.getElementById('borrar2').addEventListener("click", () => {
+if (usuario0 != null) {
+    document.getElementById('borrar1').addEventListener("click", () => {
+        
+            document.getElementById('entradas').removeChild(document.getElementById('entrada1'))
+            delete usuario0.peliculas[2]
 
-        document.getElementById('entradas').removeChild(document.getElementById('entrada2'))
-        delete userNoReg.peliculas[1]
-        console.log(userNoReg)
+        
+
+    })
+} else if (usuario1 != null) {
+    document.getElementById('borrar1').addEventListener("click", () => {
+        
+            document.getElementById('entradas').removeChild(document.getElementById('entrada1'))
+            delete usuario1.peliculas[2]
+
+        
+
+    })
+} else if (usuario3 != null) {
+    document.getElementById('borrar1').addEventListener("click", () => {
     
-})
-document.getElementById('borrar3').addEventListener("click", () => {
-  
-        document.getElementById('entradas').removeChild(document.getElementById('entrada3'))
-        delete userNoReg.peliculas[2]
-        console.log(userNoReg)
-    
-})
+            document.getElementById('entradas').removeChild(document.getElementById('entrada1'))
+            delete usuario3.peliculas[2]
+
+        
+
+    })
+} else {
+    document.getElementById('borrar1').addEventListener("click", () => {
+      
+            document.getElementById('entradas').removeChild(document.getElementById('entrada1'))
+            delete userNoReg.peliculas[0]
+            console.log(userNoReg)
+        
+
+    })
+}
+
+
+if (usuario0 != null) {
+    document.getElementById('borrar2').addEventListener("click", () => {
+      
+            document.getElementById('entradas').removeChild(document.getElementById('entrada2'))
+            delete usuario0.peliculas[3]
+
+        
+
+    })
+} else if (usuario1 != null) {
+    document.getElementById('borrar2').addEventListener("click", () => {
+        
+            document.getElementById('entradas').removeChild(document.getElementById('entrada2'))
+            delete usuario1.peliculas[3]
+
+        
+
+    })
+} else if (usuario3 != null) {
+    document.getElementById('borrar2').addEventListener("click", () => {
+        
+            document.getElementById('entradas').removeChild(document.getElementById('entrada2'))
+            delete usuario3.peliculas[3]
+
+        
+
+    })
+} else {
+    document.getElementById('borrar2').addEventListener("click", () => {
+       
+            document.getElementById('entradas').removeChild(document.getElementById('entrada2'))
+            delete userNoReg.peliculas[1]
+            
+        
+
+    })
+}
+
+
+if (usuario0 != null) {
+    document.getElementById('borrar3').addEventListener("click", () => {
+       
+            document.getElementById('entradas').removeChild(document.getElementById('entrada3'))
+            delete usuario0.peliculas[4]
+
+        
+
+    })
+} else if (usuario1 != null) {
+    document.getElementById('borrar3').addEventListener("click", () => {
+        
+            document.getElementById('entradas').removeChild(document.getElementById('entrada3'))
+            delete usuario1.peliculas[4]
+
+        
+
+    })
+} else if (usuario3 != null) {
+    document.getElementById('borrar3').addEventListener("click", () => {
+       
+            document.getElementById('entradas').removeChild(document.getElementById('entrada3'))
+            delete usuario3.peliculas[4]
+
+        
+
+    })
+} else {
+    document.getElementById('borrar3').addEventListener("click", () => {
+        
+     
+            document.getElementById('entradas').removeChild(document.getElementById('entrada3'))
+            delete userNoReg.peliculas[2]
+            
+        
+
+    })
+}
 
 
 

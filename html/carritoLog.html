@@ -21,17 +21,19 @@
             <ul class="list">
                 <li class="btnNad"><a href="carteleraLog.html">Cartelera</a> </li>
                 <li class="btnNad"><a href="historiaLog.html">Historia</a> </li>
-                <li class="btnNad"><a href="TueEntrada.htm">Tu Entrada</a> </li>
+                <!-- <li class="btnNad"><a href="TueEntrada.htm">Tu Entrada</a> </li> -->
                 <li class="btnNad"><a href="tucine.html">Tu Cine</a> </li>
                 <li class="btnNad"><a href="carritoLog.html">🛒</a> </li>
                 <li class="btnNad"><button id="logout">LogOut</button> </li>
             </ul>
         </div>
     </nav>
+    <div id="entradas">
     <div id="entrada1">
         <img id="cartel666">
         <output id="nombreP1"></output>
         <output id="horario1"></output>
+        <output id="diaP1"></output>
         <output id="numEntradas1"></output>
         <output id="butacasPosition1">Butacas: </output>
         <button id="borrar1">&cross;</button>
@@ -40,6 +42,7 @@
         <img id="cartel667">
         <output id="nombreP2"></output>
         <output id="horario2"></output>
+        <output id="diaP2"></output>
         <output id="numEntradas2"></output>
         <output id="butacasPosition2">Butacas: </output>
         <button id="borrar2">&cross;</button>
@@ -48,10 +51,12 @@
         <img id="cartel668">
         <output id="nombreP3"></output>
         <output id="horario3"></output>
+        <output id="diaP3"></output>
         <output id="numEntradas3"></output>
         <output id="butacasPosition3">Butacas: </output>
         <button id="borrar3">&cross;</button>
     </div>
+</div>
     <footer class="footer">
         <div class="footer__addr">
             <h1 class="footer__logo">Miscelania</h1>
@@ -137,6 +142,9 @@
             </div>
         </div>
     </footer>
+    <script> document.getElementById('logout').addEventListener('click', ()=> {
+        location.assign("index.html");
+      })</script>
     <script src="/js/carrito.js"></script>
 </body>
 
