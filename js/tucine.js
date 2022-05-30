@@ -56,61 +56,104 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
 // Final crear imagen de avatar
 
 
-//IMPRESION EN EL DOM DEL PERFIL DE YANN
-//Informacion del perfil
+
+
+// Final crear imagen de avatar
+
+
+//HISTORIAL DE LOS DOS USUARIOS YA REGISTRADOS CON UN HISTORIAL PREVIO
+//HISTORIAL DEL USUARIO DE NUEVO REGISTRO
+
 
 var user1 = JSON.parse(sessionStorage.getItem('clientes: 0'));
 var user2 = JSON.parse(sessionStorage.getItem('clientes: 1'));
 var user3 = JSON.parse(sessionStorage.getItem('clientes: 3'));
+
+var yann = JSON.parse(sessionStorage.getItem('usuario1'));
+var javier=JSON.parse(sessionStorage.getItem('usuario0'));
+var usuarioNuevo=JSON.parse(sessionStorage.getItem('usuario3'));
 // console.log(user2.peliculas)
 
 // var userName = sessionStorage.getItem('clientes: 1');
 // console.log(user2.peliculas[0].titulo)
 // let contador = 0;
-for (let i = 0; i < sessionStorage.length; i++) {
+
+/* console.log(sessionStorage);
+console.log(sessionStorage.length);
+console.log(user1)
+console.log(javier)
+console.log(user1.peliculas[1].titulo);
+console.log(sessionStorage.key(0)) */
+for (let i = 0; i < sessionStorage.length; i ++) { 
   let key = sessionStorage.key(i);
-
-  if (key == 'clientes: 1') {//yann
-    // console.log('clientes: 1')
+  // let key2=sessionStorage.key(i+2);
+  
+  if ( key == 'clientes: 1' ) {//yann // 
     document.getElementById("username").innerHTML = `Información de perfil: ${user2.nombre} <br> Edad: ${user2.edad} <br> Nombre de usuario: ${user2.userName} <br> Email: ${user2.emails}`;
-    document.getElementById("historial1").innerHTML = `Titulo: ${user2.peliculas[0].titulo} <br>
-                                                      Fecha: ${user2.peliculas[0].fecha} <br>
-                                                      Horario: ${user2.peliculas[0].horario} <br>
-                                                      Nº Entradas: ${user2.peliculas[0].n_entradas} <br>
-                                                      Sala: ${user2.peliculas[1].sala} <br><br>
-                                                      Titulo: ${user2.peliculas[1].titulo} <br>
-                                                      Fecha: ${user2.peliculas[1].fecha} <br>
-                                                      Horario: ${user2.peliculas[1].horario} <br>
-                                                      Nº Entradas: ${user2.peliculas[1].n_entradas} <br>
-                                                      Sala: ${user2.peliculas[1].sala} <br>`;
+    for(let j=0; j < 2;j++) {
+       
+        document.getElementById("historial1").innerHTML +=  `Titulo: ${user2.peliculas[j].titulo} <br>
+                                                                Fecha: ${user2.peliculas[j].fecha} <br>
+                                                                Horario: ${user2.peliculas[j].horario} <br>
+                                                                Nº Entradas: ${user2.peliculas[j].nEntradas} <br>`;
+        
+                                                      
+    }
+    for(let j=2; j < user2.peliculas.length;j++) {
+      // console.log('clientes: 1') o que se guarda del session storage es a usuario0, no clientes.
+     if(yann.peliculas[j].titulo != ''){
+      document.getElementById("historial1").innerHTML +=  `Titulo: ${yann.peliculas[j].titulo} <br>
+                                                              Fecha: ${yann.peliculas[j].fecha} <br>
+                                                              Horario: ${yann.peliculas[j].horario} <br>
+                                                              Nº Entradas: ${yann.peliculas[j].nEntradas} <br>`;
+     }
+  }
+  }
+    
+  else if (key == 'clientes: 0' ) { //javier .
 
-  } else if (key == 'clientes: 0') { //javier
+    document.getElementById("username").innerHTML = `Información de perfil: ${user1.nombre} <br> Edad: ${user1.edad} <br> Nombre de usuario: ${user1.userName} <br> Email: ${user1.emails}`;
+    for(let j=0; j < 2;j++) {
+       
+        document.getElementById("historial1").innerHTML +=  `Titulo: ${user1.peliculas[j].titulo} <br>
+                                                                Fecha: ${user1.peliculas[j].fecha} <br>
+                                                                Horario: ${user1.peliculas[j].horario} <br>
+                                                                Nº Entradas: ${user1.peliculas[j].nEntradas} <br>`;
+                                         
+    }
+    for(let j=2; j < user1.peliculas.length;j++) {
+      // console.log('clientes: 1') o que se guarda del session storage es a usuario0, no clientes.
+     if(javier.peliculas[j].titulo != ''){
+      document.getElementById("historial1").innerHTML +=  `Titulo: ${javier.peliculas[j].titulo} <br>
+                                                              Fecha: ${javier.peliculas[j].fecha} <br>
+                                                              Horario: ${javier.peliculas[j].horario} <br>
+                                                              Nº Entradas: ${javier.peliculas[j].nEntradas} <br>`;                                              
 
-    document.getElementById("username").innerHTML = `Información de perfil: ${user1.nombre} <br> Edad: ${user1.edad} <br> Nombre de usuario: ${user1.userName} <br> Email: ${user1.emails}`
-    document.getElementById("historial1").innerHTML = `Titulo: ${user1.peliculas[0].titulo} <br>
-                                                      Fecha: ${user1.peliculas[0].fecha} <br>
-                                                      Horario: ${user1.peliculas[0].horario} <br>
-                                                      Nº Entradas: ${user1.peliculas[0].n_entradas} <br>
-                                                      Sala: ${user1.peliculas[0].sala} <br><br>
-                                                      Titulo: ${user1.peliculas[1].titulo} <br>
-                                                      Fecha: ${user1.peliculas[1].fecha} <br>
-                                                      Horario: ${user1.peliculas[1].horario} <br>
-                                                      Nº Entradas: ${user1.peliculas[1].n_entradas} <br>
-                                                      Sala: ${user1.peliculas[1].sala} <br>`;
+     }
+  }         
+
   } else if (key == 'clientes: 3') {
-    // imagenPrevisualizacion.src = `${user3.foto}`
-    document.getElementById("username").innerHTML = `Información de perfil: ${user3.userName} <br> PassWord: ${user3.password}<br> Email: ${user3.emails}`
-    document.getElementById("historial1").innerHTML = `Titulo: ${user3.peliculas[0].titulo} <br>
-                                                      Fecha: ${user3.peliculas[0].fecha} <br>
-                                                      Horario: ${user3.peliculas[0].horario} <br>
-                                                      Nº Entradas: ${user3.peliculas[0].n_entradas} <br>
-                                                      Sala: ${user3.peliculas[0].sala} <br><br>
-                                                      Titulo: ${user3.peliculas[1].titulo} <br>
-                                                      Fecha: ${user3.peliculas[1].fecha} <br>
-                                                      Horario: ${user3.peliculas[1].horario} <br>
-                                                      Nº Entradas: ${user3.peliculas[1].n_entradas} <br>
-                                                      Sala: ${user3.peliculas[1].sala} <br>`;
+    
+    
+    document.getElementById("username").innerHTML = `Información de perfil: ${user3.nombre} <br> Edad: ${user3.edad} <br> Nombre de usuario: ${user3.userName} <br> Email: ${user3.emails}`;
+    for(let j=0; j < 2;j++) {
+       
+        document.getElementById("historial1").innerHTML +=  `Titulo: ${user3.peliculas[j].titulo} <br>
+                                                                Fecha: ${user3.peliculas[j].fecha} <br>
+                                                                Horario: ${user3.peliculas[j].horario} <br>
+                                                                Nº Entradas: ${user3.peliculas[j].nEntradas} <br>`;
+                                         
+    }
+    for(let j=2; j < user1.peliculas.length;j++) {
+      // console.log('clientes: 1') o que se guarda del session storage es a usuario0, no clientes.
+     if(javier.peliculas[j].titulo != ''){
+      document.getElementById("historial1").innerHTML +=  `Titulo: ${usuarioNuevo.peliculas[j].titulo} <br>
+                                                              Fecha: ${usuarioNuevo.peliculas[j].fecha} <br>
+                                                              Horario: ${usuarioNuevo.peliculas[j].horario} <br>
+                                                              Nº Entradas: ${usuarioNuevo.peliculas[j].nEntradas} <br>`;                                              
 
+     }
+  }         
 
   }
 }

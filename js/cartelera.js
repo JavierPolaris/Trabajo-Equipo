@@ -249,10 +249,7 @@ document.getElementById("botonH3").addEventListener("click", () => {
 });
   
 document.getElementById("botonCarrito").addEventListener("click", () => {
-  //TODO---------------- conseguir que esto funcione
-  if (!botonCarrito.classList.contains("active")) {
-    botonCarrito.classList.toggle("active");
-  }
+  btnGr(contenedorMax)
   sessionStorage.clear();
   let fechas = document.getElementById("calendarioCarrito").value;
 
@@ -400,3 +397,48 @@ for (let i = 1; i <= 32; i++) {
   });
   
 //-------------- Terminan los elementos de la compra 
+
+
+
+//-------------- Comienza el slider fotografico
+
+var imagenes = ['https://i0.wp.com/www.recursosculturales.com/wp-content/uploads/2020/12/festival-malaga-cine.jpeg?fit=702%2C328&ssl=1','https://www.audiovisual451.com/wp-content/uploads/2022/01/sundance-2022.png','https://sitgesfilmfestival.com/sitgesadmin/uploads/web_noticies_rel_img/1232371588.png','http://4.bp.blogspot.com/-i-VK3C_LKrs/VSP26c9788I/AAAAAAAAE0Y/DXIeL4mZJ8U/s1600/Hugo-Awards.jpg' ];
+ let cont = 0;
+
+  function carrusel(contenedor) {
+    contenedor.addEventListener('click', (e) => {
+      let atras = contenedor.querySelector('.atras');
+      let adelante = contenedor.querySelector('.adelante');
+      let img = contenedor.querySelector('img');
+      let tgt = e.target;
+
+      if (tgt == atras) {
+        if (cont > 0) {
+          img.src = imagenes[cont - 1];
+          cont--;
+        }else{
+          img.src = imagenes[imagenes.length - 1]
+          cont = imagenes.length - 1;
+        }
+      }else if(tgt == adelante){
+        if (cont < imagenes.length - 1) {
+          img.src = imagenes[cont + 1];
+          cont++;
+        }else{
+          img.src = imagenes[0]
+          cont = 0;
+        }
+      }
+
+
+
+
+    });
+  }
+  document.addEventListener("DOMContentLoaded", () =>{
+    let contenedor = document.querySelector('.contFoto');
+
+    carrusel(contenedor)
+  })
+
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
 
     <link href="/css/index.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
     <nav class="navbar container">
         <a href="index.html" class="logo">Cines Paradiso</a>
@@ -20,126 +22,136 @@
                 <li class="btnNad"><a href="cartelera.html">Cartelera</a> </li>
                 <li class="btnNad"><a href="historia.html">Historia</a> </li>
                 <!-- <li class="btnNad"><a href="TueEntrada.htm">Tu Entrada</a> </li> -->
-           
+
                 <li class="btnNad"><a href="carrito.html">🛒</a> </li>
                 <li class="btnNad"><a href="login.html">LogIn</a> </li>
             </ul>
         </div>
     </nav>
-    <div id="entradas">
-        <div id="entrada1">
-            <img id="cartel666">
-            <output id="nombreP1"></output>
-            <output id="horario1"></output>
-            <output id="diaP1"></output>
-            <output id="numEntradas1"></output>
-            <output id="butacasPosition1">Butacas: </output>
-            <button id="borrar1">&cross;</button>
-        </div>
-        <div id="entrada2">
-            <img id="cartel667">
-            <output id="nombreP2"></output>
-            <output id="horario2"></output>
-            <output id="diaP2"></output>
-            <output id="numEntradas2"></output>
-            <output id="butacasPosition2">Butacas: </output>
-            <button id="borrar2">&cross;</button>
-        </div>
-        <div id="entrada3">
-            <img id="cartel668">
-            <output id="nombreP3"></output>
-            <output id="horario3"></output>
-            <output id="diaP3"></output>
-            <output id="numEntradas3"></output>
-            <output id="butacasPosition3">Butacas: </output>
-            <button id="borrar3">&cross;</button>
-        </div>
+   
+    <div class="carritoFin" id="carritoFin">
+        <h1 class="carritoOut" id="carritoOut">¡¡¡No has añadido ninguna película al carrito!!!</h1>
     </div>
-        <footer class="footer">
-            <div class="footer__addr">
-                <h1 class="footer__logo">Miscelania</h1>
-    
-                <h2>Contacto</h2>
-    
-                <address>
-                    41920 San Juan de Aznalfarache(Sevilla). La Banda<br>
-    
-                    <a class="footer__btn" href="mailto:example@gmail.com">Email</a>
-                </address>
+       
+        <div class="carrito" id="carrito">
+            <button class="btnCompra" id="btnCompra">Comprar</button>
+        <div id="entradas">
+            <div id="entrada1">
+                <img id="cartel666">
+                <output id="nombreP1"></output>
+                <output id="horario1"></output>
+                <output id="diaP1"></output>
+                <output id="numEntradas1"></output>
+                <output id="butacasPosition1">Butacas: </output>
+                <button id="borrar1">&cross;</button>
             </div>
-    
-            <ul class="footer__nav">
-                <li class="nav__item">
-                    <h2 class="nav__title">Cartelería</h2>
-    
-                    <ul class="nav__ul">
-                        <li>
-                            <a href="#">Sala 1</a>
-                        </li>
-    
-                        <li>
-                            <a href="#">Sala 2</a>
-                        </li>
-    
-                        <li>
-                            <a href="#">Sala 3</a>
-                        </li>
-    
-                        <li>
-                            <a href="#">Sala 4</a>
-                        </li>
-                    </ul>
-                </li>
-    
-                <li class="nav__item nav__item--extra">
-                    <h2 class="nav__title">Tecnología</h2>
-    
-                    <ul class="nav__ul nav__ul--extra">
-                        <li>
-                            <a href="https://es.wikipedia.org/wiki/Cinerama">Cinerama</a>
-                        </li>
-    
-                        <li>
-                            <a href="https://es.wikipedia.org/wiki/VistaVision">Vistavision</a>
-                        </li>
-    
-                        <li>
-                            <a href="https://es.wikipedia.org/wiki/IMAX">IMAX</a>
-                        </li>
-    
-                        <li>
-                            <a href="https://es.wikipedia.org/wiki/Cinemascope">Cinemascope</a>
-                        </li>
-    
-                    </ul>
-                </li>
-    
-                <li class="nav__item">
-                    <h2 class="nav__title">Legal</h2>
-    
-                    <ul class="nav__ul">
-                        <li>
-                            <a href="https://www.privacypolicies.com/es/generador-politicas-privacidad/">Politica de
-                                Privacidad</a>
-                        </li>
-    
-                        <li>
-                            <a href="https://c.tenor.com/XtqQwrSn9qIAAAAM/spank-tom-and-jerry.gif">Protección de
-                                datos</a>
-                        </li>
-    
-                    </ul>
-                </li>
-            </ul>
-    
-            <div class="legal">
-                <p>&copy; 2022. All rights reserved.</p>
-    
-                <div class="legal__links">
-                    <span>Desing by <span class="heart">♥</span> Los ginetes del Love and Thunder </span>
-                </div>
+            <div id="entrada2">
+                <img id="cartel667">
+                <output id="nombreP2"></output>
+                <output id="horario2"></output>
+                <output id="diaP2"></output>
+                <output id="numEntradas2"></output>
+                <output id="butacasPosition2">Butacas: </output>
+                <button id="borrar2">&cross;</button>
             </div>
-        </footer>
+            <div id="entrada3">
+                <img id="cartel668">
+                <output id="nombreP3"></output>
+                <output id="horario3"></output>
+                <output id="diaP3"></output>
+                <output id="numEntradas3"></output>
+                <output id="butacasPosition3">Butacas: </output>
+                <button id="borrar3">&cross;</button>
+            </div>
+        </div>
+       
+    
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Miscelania</h1>
+
+            <h2>Contacto</h2>
+
+            <address>
+                41920 San Juan de Aznalfarache(Sevilla). La Banda<br>
+
+                <a class="footer__btn" href="mailto:example@gmail.com">Email</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Cartelería</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Sala 1</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sala 2</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sala 3</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Sala 4</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Tecnología</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/Cinerama">Cinerama</a>
+                    </li>
+
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/VistaVision">Vistavision</a>
+                    </li>
+
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/IMAX">IMAX</a>
+                    </li>
+
+                    <li>
+                        <a href="https://es.wikipedia.org/wiki/Cinemascope">Cinemascope</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="https://www.privacypolicies.com/es/generador-politicas-privacidad/">Politica de
+                            Privacidad</a>
+                    </li>
+
+                    <li>
+                        <a href="https://c.tenor.com/XtqQwrSn9qIAAAAM/spank-tom-and-jerry.gif">Protección de
+                            datos</a>
+                    </li>
+
+                </ul>
+            </li>
+        </ul>
+
+        <div class="legal">
+            <p>&copy; 2022. All rights reserved.</p>
+
+            <div class="legal__links">
+                <span>Desing by <span class="heart">♥</span> Los ginetes del Love and Thunder </span>
+            </div>
+        </div>
+    </footer>
     <script src="/js/carrito.js"></script>
 </body>
+
 </html>

@@ -1766,7 +1766,7 @@ form.addEventListener('submit', (e) => {
         {
 
         }],
-        sala: "1",
+        sala: "",
       },
 
       {
@@ -1870,7 +1870,7 @@ form.addEventListener('submit', (e) => {
         {
 
         }],
-        sala: "3",
+        sala: "",
       },
       {
         titulo: "",

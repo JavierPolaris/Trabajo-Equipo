@@ -5,52 +5,6 @@ let usuario3 = JSON.parse(sessionStorage.getItem('clientes: 3'))
 
 
 
-// let datosPeliculas = [
-
-//     {
-//         'adult': 'false',
-//         'backdrop_path': '',
-//         'genre_ids': '',
-//         'id': '',
-//         'original_language': '',
-//         'original_title': '',
-//         'overview': '',
-//         'popularity': '',
-//         'poster_path': '',
-//         'release_date': '',
-//         'title': '',
-//         'video': '',
-//         'vote_average': '',
-//         'vote_count': ''
-
-//     },
-//     {
-//         'adult': 'false',
-//         'backdrop_path': '',
-//         'genre_ids': '',
-//         'id': '',
-//         'original_language': '',
-//         'original_title': '',
-//         'overview': '',
-//         'popularity': '',
-//         'poster_path': '',
-//         'release_date': '',
-//         'title': '',
-//         'video': '',
-//         'vote_average': '',
-//         'vote_count': '' 
-//     }
-
-// ]
-
-// document.getElementById('cartel').src = 'https://m.media-amazon.com/images/I/51DigcZ8W8L._AC_.jpg'
-// document.getElementById('nombreP').innerText = userNoReg.peliculas[0].titulo;
-// document.getElementById('numEntradas').innerText =` ${userNoReg.peliculas[0].nEntradas} entradas: ${userNoReg.peliculas[0].nEntradas * 5}€`;
-// document.getElementById('horario').innerText = userNoReg.peliculas[0].horario;
-// document.getElementById('diaP').innerText = userNoReg.peliculas[0].fecha;
-// for (let i = 0; i <= (userNoReg.peliculas[0].nEntradas - 1); i++) {
-//     document.getElementById('butacasPosition').innerText +=  ` ${userNoReg.peliculas[0].butacas[i].asiento}, ` 
-// };
 
 
 for (let i = 0; i <= 2; i++) {
@@ -258,3 +212,24 @@ if (document.getElementById('nombreP2').innerText == '') {
 if (document.getElementById('nombreP3').innerText == '') {
     document.getElementById('entrada3').style.display = 'none';
 }
+
+
+
+
+
+document.getElementById('btnCompra').addEventListener('click', ()=> {
+    let test = document.getElementById('carrito');
+    if (test.style.display == 'inline') {
+        test.style.display = 'block';
+    } else {
+        test.style.display = 'none'
+    };
+
+
+    let test1 = document.getElementById('carritoFin');
+    if (test1.style.display == 'block') {
+        test1.style.display = 'none';
+    } else {
+        test1.style.display = 'block'
+    }
+})
