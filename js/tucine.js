@@ -98,10 +98,11 @@ for (let i = 0; i < sessionStorage.length; i ++) {
                                                               Nº Entradas: ${user2.peliculas[j].nEntradas} <br>`;
      }
   }
-  }
-    
-  else if (key == 'clientes: 0' ) { //javier .
-
+  console.log(key)
+  } else if (key == 'clientes: 0' ) { //javier .
+console.log(user1.nombre)
+console.log(user1)
+console.log(user3)
     document.getElementById("username").innerHTML = `Información de perfil: ${user1.nombre} <br> Edad: ${user1.edad} <br> Nombre de usuario: ${user1.userName} <br> Email: ${user1.emails}`;
     for(let j=0; j < 2;j++) {
        
@@ -122,12 +123,8 @@ for (let i = 0; i < sessionStorage.length; i ++) {
      }
   }         
 
-  } 
-}
-if (localStorage.key(0) == 'clientes: 3') {
-
-
-  document.getElementById("username").innerHTML = `Información de perfil: ${user3.nombre} <br> <br> Nombre de usuario: ${user3.userName} <br> Email: ${user3.emails}`;
+  } else if (localStorage.key(0) == 'clientes: 3'){
+    document.getElementById("username").innerHTML = `Información de perfil: ${user3.nombre} <br> <br> Nombre de usuario: ${user3.userName} <br> Email: ${user3.emails}`;
 
     for(let i=0; i < user3.peliculas.length;i++) {
       if(user3.peliculas[i].titulo != '') {
@@ -138,9 +135,9 @@ if (localStorage.key(0) == 'clientes: 3') {
 
   }
   }
-
-
 }
+console.log(localStorage.key(0))
+console.log(user3)
 
 //TODO----------tenemos que coger la key mirar en peliculas y cambiarla o borrarla para que no se vea ni se recarge
 
@@ -194,3 +191,4 @@ document.getElementById('borrarHistorial').addEventListener('click', () => {
 document.getElementById('logout').addEventListener('click', () => {
   location.assign("index.html");
 })
+}
