@@ -464,7 +464,15 @@ document.getElementById('logIn').addEventListener('click', (e) => {
   if (userLog == '' || passLog == '') {
     alert("Los campos usuario y contraseña no pueden estar vacios")
   }
+  var primeraConexion = JSON.parse(localStorage.getItem('clientes: 3'));
 
+  // for (let i = 0; i < localStorage.length; i ++) { 
+  //    let key = localStorage.key(i);
+     if ( primeraConexion.userName == userLog && primeraConexion.password == passLog)  {
+       
+       location.assign("tucine.html");
+    //  } 
+    }
   if (userLog === userReg[0].userName && passLog === userReg[0].password) {
     console.log('ok log')
     sessionStorage.setItem(`clientes: 0`, JSON.stringify({

@@ -17,7 +17,8 @@
         <a href="indexLog.html" class="logo">Cines Paradiso</a>
         <input type="checkbox" id="toggler">
         <label for="toggler"><i class="ri-menu-line"></i> </label>
-        <a href="https://www.academiadecine.com"><img  class="logo2"src="/css/Logo_de_la_Academia_de_Cine_de_España.png" alt=""></a>
+        <a href="https://www.academiadecine.com"><img class="logo2"
+                src="/css/Logo_de_la_Academia_de_Cine_de_España.png" alt=""></a>
 
         <div class="menu">
             <ul class="list">
@@ -30,39 +31,44 @@
             </ul>
         </div>
     </nav>
+
+    <div class="carritoFin" id="carritoFin">
+        <h1 class="carritoOut" id="carritoOut">¡¡¡No has añadido ninguna película al carrito!!!</h1>
+    </div>
+
     <div class="carrito" id="carrito">
         <button class="btnCompra" id="btnCompra">Comprar</button>
-    <div id="entradas">
-        
-    <div id="entrada1">
-        <img id="cartel666">
-        <output id="nombreP1"></output>
-        <output id="horario1"></output>
-        <output id="diaP1"></output>
-        <output id="numEntradas1"></output>
-        <output id="butacasPosition1">Butacas: </output>
-        <button id="borrar1">&cross;</button>
-    </div>
-    <div id="entrada2">
-        <img id="cartel667">
-        <output id="nombreP2"></output>
-        <output id="horario2"></output>
-        <output id="diaP2"></output>
-        <output id="numEntradas2"></output>
-        <output id="butacasPosition2">Butacas: </output>
-        <button id="borrar2">&cross;</button>
-    </div>
-    <div id="entrada3">
-        <img id="cartel668">
-        <output id="nombreP3"></output>
-        <output id="horario3"></output>
-        <output id="diaP3"></output>
-        <output id="numEntradas3"></output>
-        <output id="butacasPosition3">Butacas: </output>
-        <button id="borrar3">&cross;</button>
-    </div>
-</div>
-</div>
+        <div id="entradas">
+
+            <div id="entrada1">
+                <img id="cartel666">
+                <output id="nombreP1"></output>
+                <output id="horario1"></output>
+                <output id="diaP1"></output>
+                <output id="numEntradas1"></output>
+                <output id="butacasPosition1">Butacas: </output>
+                <button id="borrar1">&cross;</button>
+            </div>
+            <div id="entrada2">
+                <img id="cartel667">
+                <output id="nombreP2"></output>
+                <output id="horario2"></output>
+                <output id="diaP2"></output>
+                <output id="numEntradas2"></output>
+                <output id="butacasPosition2">Butacas: </output>
+                <button id="borrar2">&cross;</button>
+            </div>
+            <div id="entrada3">
+                <img id="cartel668">
+                <output id="nombreP3"></output>
+                <output id="horario3"></output>
+                <output id="diaP3"></output>
+                <output id="numEntradas3"></output>
+                <output id="butacasPosition3">Butacas: </output>
+                <button id="borrar3">&cross;</button>
+            </div>
+        </div>
+    
     <footer class="footer">
         <div class="footer__addr">
             <h1 class="footer__logo">Miscelania</h1>
@@ -80,23 +86,7 @@
             <li class="nav__item">
                 <h2 class="nav__title">Cartelería</h2>
 
-                <ul class="nav__ul">
-                    <li>
-                        <a href="#">Sala 1</a>
-                    </li>
 
-                    <li>
-                        <a href="#">Sala 2</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Sala 3</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Sala 4</a>
-                    </li>
-                </ul>
             </li>
 
             <li class="nav__item nav__item--extra">
@@ -148,9 +138,9 @@
             </div>
         </div>
     </footer>
-    <script> document.getElementById('logout').addEventListener('click', ()=> {
-        location.assign("index.html");
-      })</script>
+    <script> document.getElementById('logout').addEventListener('click', () => {
+            location.assign("index.html");
+        })</script>
     <script src="/js/carrito.js"></script>
 </body>
 

@@ -1,7 +1,7 @@
 let userNoReg = JSON.parse(localStorage.getItem('clientes: 2'))
 let usuario0 = JSON.parse(sessionStorage.getItem('clientes: 0'))
 let usuario1 = JSON.parse(sessionStorage.getItem('clientes: 1'))
-let usuario3 = JSON.parse(sessionStorage.getItem('clientes: 3'))
+let usuario3 = JSON.parse(localStorage.getItem('clientes: 3'))
 
 
 
@@ -13,7 +13,7 @@ for (let i = 0; i <= 2; i++) {
     } else if (usuario1 != null) {
         document.getElementById(`cartel${(i + 666)}`).src = usuario1.peliculas[(i + 2)].cartel
     } else if (usuario3 != null) {
-        document.getElementById(`cartel${(i + 666)}`).src = usuario3.peliculas[(i + 2)].cartel
+        document.getElementById(`cartel${(i + 666)}`).src = usuario3.peliculas[i].cartel
     } else {
         document.getElementById(`cartel${(i + 666)}`).src = userNoReg.peliculas[i].cartel
     }
@@ -24,7 +24,7 @@ for (let i = 0; i <= 2; i++) {
     } else if (usuario1 != null) {
         document.getElementById(`nombreP${(i + 1)}`).innerText = usuario1.peliculas[(i + 2)].titulo;
     } else if (usuario3 != null) {
-        document.getElementById(`nombreP${(i + 1)}`).innerText = usuario3.peliculas[(i + 2)].titulo;
+        document.getElementById(`nombreP${(i + 1)}`).innerText = usuario3.peliculas[i].titulo;
     } else {
         document.getElementById(`nombreP${(i + 1)}`).innerText = userNoReg.peliculas[i].titulo;
     }
@@ -35,7 +35,7 @@ for (let i = 0; i <= 2; i++) {
     } else if (usuario1 != null) {
         document.getElementById(`numEntradas${(i + 1)}`).innerText = ` ${usuario1.peliculas[(i + 2)].nEntradas} entradas: ${usuario1.peliculas[(i + 2)].nEntradas * 5}€`;
     } else if (usuario3 != null) {
-        document.getElementById(`numEntradas${(i + 1)}`).innerText = ` ${usuario3.peliculas[(i + 2)].nEntradas} entradas: ${usuario3.peliculas[(i + 2)].nEntradas * 5}€`;
+        document.getElementById(`numEntradas${(i + 1)}`).innerText = ` ${usuario3.peliculas[i].nEntradas} entradas: ${usuario3.peliculas[(i + 2)].nEntradas * 5}€`;
     } else {
         document.getElementById(`numEntradas${(i + 1)}`).innerText = ` ${userNoReg.peliculas[i].nEntradas} entradas: ${userNoReg.peliculas[i].nEntradas * 5}€`;
     }
@@ -46,7 +46,7 @@ for (let i = 0; i <= 2; i++) {
     } else if (usuario1 != null) {
         document.getElementById(`horario${(i + 1)}`).innerText = usuario1.peliculas[(i + 2)].horario;
     } else if (usuario3 != null) {
-        document.getElementById(`horario${(i + 1)}`).innerText = usuario3.peliculas[(i + 2)].horario;
+        document.getElementById(`horario${(i + 1)}`).innerText = usuario3.peliculas[i].horario;
     } else {
         document.getElementById(`horario${(i + 1)}`).innerText = userNoReg.peliculas[i].horario;
     }
@@ -57,7 +57,7 @@ for (let i = 0; i <= 2; i++) {
     } else if (usuario1 != null) {
         document.getElementById(`diaP${(i + 1)}`).innerText = usuario1.peliculas[(i + 2)].fecha;
     } else if (usuario3 != null) {
-        document.getElementById(`diaP${(i + 1)}`).innerText = usuario3.peliculas[(i + 2)].fecha;
+        document.getElementById(`diaP${(i + 1)}`).innerText = usuario3.peliculas[i].fecha;
     } else {
         document.getElementById(`diaP${(i + 1)}`).innerText = userNoReg.peliculas[i].fecha;
     }
@@ -72,8 +72,8 @@ for (let i = 0; i <= 2; i++) {
             j < (usuario1.peliculas[(i + 2)].nEntradas - 1) ? document.getElementById(`butacasPosition${(i + 1)}`).innerText += ` ${usuario1.peliculas[(i + 2)].butacas[j].asiento}, ` : document.getElementById(`butacasPosition${(i + 1)}`).innerText += ` ${usuario1.peliculas[(i + 2)].butacas[j].asiento}`
         };
     } else if (usuario3 != null) {
-        for (let j = 0; j <= (usuario3.peliculas[(i + 2)].nEntradas - 1); j++) {
-            j < (usuario3.peliculas[(i + 2)].nEntradas - 1) ? document.getElementById(`butacasPosition${(i + 1)}`).innerText += ` ${usuario3.peliculas[(i + 2)].butacas[j].asiento}, ` : document.getElementById(`butacasPosition${(i + 1)}`).innerText += ` ${usuario3.peliculas[(i + 2)].butacas[j].asiento}`
+        for (let j = 0; j <= (usuario3.peliculas[i].nEntradas - 1); j++) {
+            j < (usuario3.peliculas[i].nEntradas - 1) ? document.getElementById(`butacasPosition${(i + 1)}`).innerText += ` ${usuario3.peliculas[i].butacas[j].asiento}, ` : document.getElementById(`butacasPosition${(i + 1)}`).innerText += ` ${usuario3.peliculas[i].butacas[j].asiento}`
         };
     } else {
         for (let j = 0; j <= (userNoReg.peliculas[i].nEntradas - 1); j++) {
@@ -106,7 +106,7 @@ if (usuario0 != null) {
     document.getElementById('borrar1').addEventListener("click", () => {
     
             document.getElementById('entradas').removeChild(document.getElementById('entrada1'))
-            delete usuario3.peliculas[2]
+            delete usuario3.peliculas[0]
 
         
 
@@ -145,7 +145,7 @@ if (usuario0 != null) {
     document.getElementById('borrar2').addEventListener("click", () => {
         
             document.getElementById('entradas').removeChild(document.getElementById('entrada2'))
-            delete usuario3.peliculas[3]
+            delete usuario3.peliculas[1]
 
         
 
@@ -184,7 +184,7 @@ if (usuario0 != null) {
     document.getElementById('borrar3').addEventListener("click", () => {
        
             document.getElementById('entradas').removeChild(document.getElementById('entrada3'))
-            delete usuario3.peliculas[4]
+            delete usuario3.peliculas[2]
 
         
 
