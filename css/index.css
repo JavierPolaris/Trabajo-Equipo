@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-p {
+.parrafo p{
   font-size: 15px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: gray;
@@ -38,6 +38,17 @@ p {
  
 }
 
+.logo1{
+  height: 40px;
+  width: 40px;
+  filter: invert(1);
+}
+.logo2{
+  height: 40px;
+  width: 40px;
+  margin-left: 141px;
+  filter: invert(1);
+}
 /* Comienzo del nadVar */
 
 .navbar {
@@ -475,7 +486,7 @@ display: inline;
   border: solid 2px gray;
   align-items: center;
   position: relative;
-  left: 652px;
+  left: 635px;
   /* bottom: 168px; */
 }
 .btnCompra:active{
@@ -752,22 +763,22 @@ input[type=checkbox] {
 }
 
 #imgArriba {
-  margin-top: 10px;
-  margin-right: 100px;
-  width: 700px;
-  height: 200px;
+  /* margin-top: 10px;
+  margin-right: 100px; */
+  width: 672px;
+  height: 657px;
 }
-.parrafo{
+/* .parrafo{
   font-size: xx-large;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 #imagenAntigua2{
   display: flex;
   justify-content: space-around;
 }
 #imgCentro{
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 31px;
+  /* margin-bottom: 100px; */
   width: 700px;
   height: 400px;
 }
