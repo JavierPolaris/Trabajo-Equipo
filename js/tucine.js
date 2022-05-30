@@ -67,23 +67,13 @@ document.getElementById("seleccionArchivos").addEventListener('change', () => {
 
 var user1 = JSON.parse(sessionStorage.getItem('clientes: 0'));
 var user2 = JSON.parse(sessionStorage.getItem('clientes: 1'));
-var user3 = JSON.parse(sessionStorage.getItem('clientes: 3'));
+var user3 = JSON.parse(localStorage.getItem('clientes: 3'));
 
 var yann = JSON.parse(sessionStorage.getItem('usuario1'));
 var javier=JSON.parse(sessionStorage.getItem('usuario0'));
-var usuarioNuevo=JSON.parse(sessionStorage.getItem('usuario3'));
-// console.log(user2.peliculas)
+var usuarioNuevo=JSON.parse(localStorage.getItem('usuario3'));
 
-// var userName = sessionStorage.getItem('clientes: 1');
-// console.log(user2.peliculas[0].titulo)
-// let contador = 0;
 
-/* console.log(sessionStorage);
-console.log(sessionStorage.length);
-console.log(user1)
-console.log(javier)
-console.log(user1.peliculas[1].titulo);
-console.log(sessionStorage.key(0)) */
 for (let i = 0; i < sessionStorage.length; i ++) { 
   let key = sessionStorage.key(i);
   // let key2=sessionStorage.key(i+2);
@@ -101,11 +91,11 @@ for (let i = 0; i < sessionStorage.length; i ++) {
     }
     for(let j=2; j < user2.peliculas.length;j++) {
       // console.log('clientes: 1') o que se guarda del session storage es a usuario0, no clientes.
-     if(yann.peliculas[j].titulo != ''){
-      document.getElementById("historial1").innerHTML +=  `Titulo: ${yann.peliculas[j].titulo} <br>
-                                                              Fecha: ${yann.peliculas[j].fecha} <br>
-                                                              Horario: ${yann.peliculas[j].horario} <br>
-                                                              Nº Entradas: ${yann.peliculas[j].nEntradas} <br>`;
+     if(user2.peliculas[j].titulo != ''){
+      document.getElementById("historial1").innerHTML +=  `Titulo: ${user2.peliculas[j].titulo} <br>
+                                                              Fecha: ${user2.peliculas[j].fecha} <br>
+                                                              Horario: ${user2.peliculas[j].horario} <br>
+                                                              Nº Entradas: ${user2.peliculas[j].nEntradas} <br>`;
      }
   }
   }
@@ -123,41 +113,34 @@ for (let i = 0; i < sessionStorage.length; i ++) {
     }
     for(let j=2; j < user1.peliculas.length;j++) {
       // console.log('clientes: 1') o que se guarda del session storage es a usuario0, no clientes.
-     if(javier.peliculas[j].titulo != ''){
-      document.getElementById("historial1").innerHTML +=  `Titulo: ${javier.peliculas[j].titulo} <br>
-                                                              Fecha: ${javier.peliculas[j].fecha} <br>
-                                                              Horario: ${javier.peliculas[j].horario} <br>
-                                                              Nº Entradas: ${javier.peliculas[j].nEntradas} <br>`;                                              
+     if(user1.peliculas[j].titulo != ''){
+      document.getElementById("historial1").innerHTML +=  `Titulo: ${user1.peliculas[j].titulo} <br>
+                                                              Fecha: ${user1.peliculas[j].fecha} <br>
+                                                              Horario: ${user1.peliculas[j].horario} <br>
+                                                              Nº Entradas: ${user1.peliculas[j].nEntradas} <br>`;                                              
 
      }
   }         
 
-  } else if (key == 'clientes: 3') {
-    
-    
-    document.getElementById("username").innerHTML = `Información de perfil: ${user3.nombre} <br> Edad: ${user3.edad} <br> Nombre de usuario: ${user3.userName} <br> Email: ${user3.emails}`;
-    for(let j=0; j < 2;j++) {
-       
-        document.getElementById("historial1").innerHTML +=  `Titulo: ${user3.peliculas[j].titulo} <br>
-                                                                Fecha: ${user3.peliculas[j].fecha} <br>
-                                                                Horario: ${user3.peliculas[j].horario} <br>
-                                                                Nº Entradas: ${user3.peliculas[j].nEntradas} <br>`;
-                                         
-    }
-    for(let j=2; j < user1.peliculas.length;j++) {
-      // console.log('clientes: 1') o que se guarda del session storage es a usuario0, no clientes.
-     if(javier.peliculas[j].titulo != ''){
-      document.getElementById("historial1").innerHTML +=  `Titulo: ${usuarioNuevo.peliculas[j].titulo} <br>
-                                                              Fecha: ${usuarioNuevo.peliculas[j].fecha} <br>
-                                                              Horario: ${usuarioNuevo.peliculas[j].horario} <br>
-                                                              Nº Entradas: ${usuarioNuevo.peliculas[j].nEntradas} <br>`;                                              
+  } 
+}
+if (localStorage.key(0) == 'clientes: 3') {
 
-     }
-  }         
+
+  document.getElementById("username").innerHTML = `Información de perfil: ${user3.nombre} <br> <br> Nombre de usuario: ${user3.userName} <br> Email: ${user3.emails}`;
+
+    for(let i=0; i < user3.peliculas.length;i++) {
+      if(user3.peliculas[i].titulo != '') {
+      document.getElementById("historial1").innerHTML += ` Titulo: ${user3.peliculas[i].titulo} <br>
+                                                              Fecha: ${user3.peliculas[i].fecha} <br>
+                                                              Horario: ${user3.peliculas[i].horario} <br>
+                                                              Nº Entradas: ${user3.peliculas[i].nEntradas} <br><br>`;
 
   }
-}
+  }
 
+
+}
 
 //TODO----------tenemos que coger la key mirar en peliculas y cambiarla o borrarla para que no se vea ni se recarge
 
@@ -171,27 +154,28 @@ document.getElementById('borrarHistorial').addEventListener('click', () => {
 
     if (key == 'clientes: 1') { //Yann
 
-      user1.peliculas = [];
+      user2.peliculas = [];
       console.log('borrado')
-      sessionStorage.setItem('clientes: 1', JSON.stringify(user1))
+      sessionStorage.setItem('clientes: 1', JSON.stringify(user2))
       document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
 
 
     } else if (key == 'clientes: 0') { //javier
 
-      user2.peliculas = [];
+      user1.peliculas = [];
       console.log('borrado')
-      sessionStorage.setItem('clientes: 0', JSON.stringify(user2))
-      document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
-
-    } else if (key == 'clientes: 3') { //Usuario de registro
-
-      user3.peliculas = [];
-      console.log('borrado')
-      sessionStorage.setItem('clientes: 3', JSON.stringify(user3))
+      sessionStorage.setItem('clientes: 0', JSON.stringify(user1))
       document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
 
     }
+  }
+  if (localStorage.key(0) == 'clientes: 3') { //Usuario de registro
+
+    user3.peliculas = [];
+    console.log('borrado')
+    sessionStorage.setItem('clientes: 3', JSON.stringify(user3))
+    document.getElementById('historial1').innerHTML = 'Tu historial está vacío'
+
   }
 })
 

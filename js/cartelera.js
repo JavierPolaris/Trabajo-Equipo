@@ -1,62 +1,55 @@
 //-----------------Creando Carátula desde la API THEMOVIEDB.ORG
-
 const APIKEY = 'a0b853f3c16b413dd04bcbf5d558eedf'; //KEY PROPORCIONADA POR LA API
 const URLBASE = 'https://api.themoviedb.org/3/'; //URL BASE A LA QUE SE LE AÑADE LA RUTA DE LAS CLASES
 const URLIMG = 'https://image.tmdb.org/t/p/w500/'; //URL PARA COGER IMÁGENES
-function getMovies() { //COGER EL JSON DE LA API
-  const URL = `${URLBASE}discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=${APIKEY}`;
-  fetch(URL)
+function getMovies (){ //COGER EL JSON DE LA API
+    const URL = `${URLBASE}discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=${APIKEY}`;
+    fetch(URL)
     .then(res => res.json())
     .then(json => {
-      console.log(json);
-      //CARGAR IMÁGENES DE LA API A LOS ID DEL HTML
-      //Meto cada cartel de la API en una variable general para poder usarla en todo el js
-      img1 = `${URLIMG}iwnQ1JH1wdWrGYkgWySptJ5284A.jpg`;
-      img2 = `${URLIMG}77i7EBUyQKOUiZeYQ5tWDGQb0AI.jpg`;
-      img3 = `${URLIMG}pfte7wdMobMF4CVHuOxyu6oqeeA.jpg`;
-      img4 = `${URLIMG}bQTHTZezSudf27mMQtedHf1XpgO.jpg`;
-      img5 = `${URLIMG}6uSPcdGNA2A6vJmCagXkvnutegs.jpg`;
-      img6 = `${URLIMG}6UrNb7sdolnuqxBJ4I8OxTUvTmQ.jpg`;
-      img7 = `${URLIMG}b9Q2WR62yB5Aq0hd6kyRFS9cc3Y.jpg`;
-      img8 = `${URLIMG}u3G2gF7M9dmH4Vcs54PUjieOi0C.jpg`;
-      img9 = `${URLIMG}aqNzRiaEsfv567Ji9njJofblRBE.jpg`;
-      img10 = `${URLIMG}96htqghZlKctNJqDLo2DuC9PEap.jpg`;
-
-      //Se cargan las imágenes en cada id de cartel
-      document.getElementById('cartel0').src = img1;
-      document.getElementById('cartel1').src = img2;
-      document.getElementById('cartel2').src = img3;
-      document.getElementById('cartel3').src = img4;
-      document.getElementById('cartel4').src = img5;
-      document.getElementById('cartel5').src = img6;
-      document.getElementById('cartel6').src = img7;
-      document.getElementById('cartel7').src = img8;
-      document.getElementById('cartel8').src = img9;
-      document.getElementById('cartel9').src = img10;
-
-      //Se recogen las sinopsis de cada título desde la API
-      let overviews = [json.results[0].overview, json.results[6].overview, json.results[1].overview,
-      json.results[8].overview, json.results[12].overview, json.results[15].overview, json.results[13].overview,
-      json.results[19].overview, json.results[18].overview, json.results[16].overview];
-
-
-      //SE RECORRE ARRAY
-      for (let i = 0; i < overviews.length; i++) {
-
-        sinopsis = overviews[i]
-        // console.log(sinopsis);
-        document.getElementById(`sinop${i}`).textContent = sinopsis;
-      }
-
-      //Se recogen los títulos de la API para el Popup
-      let titulo = [json.results[0].title, json.results[6].title, json.results[1].title,
-      json.results[8].title, json.results[12].title, json.results[15].title, json.results[13].title,
-      json.results[19].title, json.results[18].title, json.results[16].title];
-      console.log(titulo)
-      //Se recogen las notas de la API para el Popup
-      let notaP = [json.results[0].vote_average, json.results[6].vote_average, json.results[1].vote_average,
-      json.results[8].vote_average, json.results[12].vote_average, json.results[15].vote_average, json.results[13].vote_average,
-      json.results[19].vote_average, json.results[18].vote_average, json.results[16].vote_average];
+        console.log(json);
+    //CARGAR IMÁGENES DE LA API A LOS ID DEL HTML
+    //Meto cada cartel de la API en una variable general para poder usarla en todo el js
+img1 = `${URLIMG}iwnQ1JH1wdWrGYkgWySptJ5284A.jpg`;
+img2 = `${URLIMG}77i7EBUyQKOUiZeYQ5tWDGQb0AI.jpg`;
+img3 = `${URLIMG}pfte7wdMobMF4CVHuOxyu6oqeeA.jpg`;
+img4 = `${URLIMG}bQTHTZezSudf27mMQtedHf1XpgO.jpg`;
+img5 = `${URLIMG}6uSPcdGNA2A6vJmCagXkvnutegs.jpg`;
+img6 = `${URLIMG}6UrNb7sdolnuqxBJ4I8OxTUvTmQ.jpg`;
+img7 = `${URLIMG}b9Q2WR62yB5Aq0hd6kyRFS9cc3Y.jpg`;
+img8 = `${URLIMG}u3G2gF7M9dmH4Vcs54PUjieOi0C.jpg`;
+img9 = `${URLIMG}aotTZos5KswgCryEzx2rlOjFsm1.jpg`;
+img10 = `${URLIMG}96htqghZlKctNJqDLo2DuC9PEap.jpg`;
+//Se cargan las imágenes en cada id de cartel
+document.getElementById('cartel0').src = img1;
+document.getElementById('cartel1').src = img2;
+document.getElementById('cartel2').src = img3;
+document.getElementById('cartel3').src = img4;
+document.getElementById('cartel4').src = img5;
+document.getElementById('cartel5').src = img6;
+document.getElementById('cartel6').src = img7;
+document.getElementById('cartel7').src = img8;
+document.getElementById('cartel8').src = img9;
+document.getElementById('cartel9').src = img10;
+//Se recogen las sinopsis de cada título desde la API
+let overviews = [json.results[0].overview, json.results[10].overview, json.results[1].overview,
+json.results[6].overview, json.results[14].overview, json.results[18].overview, json.results[13].overview,
+json.results[17].overview, json.results[3].overview, json.results[15].overview];
+//SE RECORRE ARRAY
+for(let i=0; i<overviews.length; i++){
+    sinopsis = overviews[i]
+    // console.log(sinopsis);
+    document.getElementById(`sinop${i}`).textContent = sinopsis;
+}
+//Se recogen los títulos de la API para el Popup
+ let titulo = [json.results[0].title, json.results[10].title, json.results[1].title,
+ json.results[6].title, json.results[14].title, json.results[18].title, json.results[13].title,
+ json.results[17].title, json.results[3].title, json.results[15].title];
+ console.log(titulo)
+ //Se recogen las notas de la API para el Popup
+let notaP = [json.results[0].vote_average, json.results[10].vote_average, json.results[1].vote_average,
+json.results[6].vote_average, json.results[14].vote_average, json.results[18].vote_average, json.results[13].vote_average,
+json.results[17].vote_average, json.results[3].vote_average, json.results[15].vote_average];
 
 
       //EVENTO PARA INTERACTUAR CON CARTELES
@@ -335,7 +328,7 @@ for (let i = 1; i <= 32; i++) {
       } else if (usuario1 != null) {
         usuario1.peliculas[(k + 2)].butacas[contB].asiento = i;
       } else if (usuario3 != null) {
-        usuario3.peliculas[(k + 2)].butacas[contB].asiento = i;
+        usuario3.peliculas[k].butacas[contB].asiento = i;
       } else {
         userNoReg.peliculas[k].butacas[contB].asiento = i;
       }
@@ -345,7 +338,7 @@ for (let i = 1; i <= 32; i++) {
       } else if (usuario1 != null) {
         usuario1.peliculas[(k + 2)].nEntradas = contB + 1;
       } else if (usuario3 != null) {
-        usuario3.peliculas[(k + 2)].nEntradas = contB + 1;
+        usuario3.peliculas[k].nEntradas = contB + 1;
       } else {
         userNoReg.peliculas[k].nEntradas = contB + 1;
       }
@@ -358,7 +351,7 @@ for (let i = 1; i <= 32; i++) {
       } else if (usuario1 != null) {
         delete usuario1.peliculas[(k + 2)].butacas[contB - 1].asiento;
       } else if (usuario3 != null) {
-        delete usuario3.peliculas[(k + 2)].butacas[contB - 1].asiento;
+        delete usuario3.peliculas[k].butacas[contB - 1].asiento;
       } else {
         delete userNoReg.peliculas[k].butacas[contB - 1].asiento;
       }
@@ -366,9 +359,9 @@ for (let i = 1; i <= 32; i++) {
       if (usuario0 != null) {
         usuario0.peliculas[(k + 2)].nEntradas--;
       } else if (usuario1 != null) {
-        uusuario1.peliculas[(k + 2)].nEntradas--;
+        usuario1.peliculas[(k + 2)].nEntradas--;
       } else if (usuario3 != null) {
-        usuario3.peliculas[(k + 2)].nEntradas--;
+        usuario3.peliculas[k].nEntradas--;
       } else {
         userNoReg.peliculas[k].nEntradas--;
       }

@@ -1624,7 +1624,8 @@ const checkPassFormat = (pass) => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
- 
+  localStorage.clear();
+  sessionStorage.clear();
   // verifica el formato de usuario
   if (!userExp.test(formUser.value)) {
     alert('Usuario no valido'); return;
